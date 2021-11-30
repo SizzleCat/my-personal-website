@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shannon Maraghy | Creative Frontend Developer</title>
+    <script
+      src="https://kit.fontawesome.com/e67304e0be.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Rotating Cover -->
+      <div class="rotating-container">
+        <i
+          class="fas fa-bars fa-3x fa-fade hamburger"
+          id="hamburger"
+          style="--fa-animation-duration: 3.5s; --fa-fade-opacity: 0.5"
+        ></i>
+        <div class="stripe">
+          <img src="images/logo.png" alt="logo" id="logo" />
+          <h1 class="creative">creative</h1>
+          <h1 class="frontend">frontend developer</h1>
+        </div>
+        <div class="hoverboard-container" id="hoverboard-container"></div>
+      </div>
+
+      <!-- Inner Content  -->
+      <div class="inner-content">
+        <!-- Section: Home  -->
+        <section id="home" class="home">
+          <div id="home-left">
+            <i class="fa-solid fa-circle-xmark fa-3x" id="x-mark"></i>
+            <h1 class="hero-text">Hi :)</h1>
+            <p>
+              I'm Shannon Maraghy.
+              <br />
+              My resume may be light on<br />
+              work experience for the moment, <br />
+              but I hope you can see my passion /<br />
+              skills in the design & coding of my site...
+            </p>
+            <video width="400" height="300" controls>
+              <source src="pexels_vid.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <nav id="home-right">
+            <ul>
+              <li id="about-link">
+                <a href="#skills">Skills</a>
+              </li>
+              <li id="projects-link">
+                <a href="#projects">Projects</a>
+              </li>
+              <li id="contact-link">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <!-- Section: Skills  -->
+        <section id="skills">
+          <header>
+            <h2 class="hero-text">Skills</h2>
+            <a href="#wrapper"><i class="fa-solid fa-chevron-up fa-3x"></i></a>
+          </header>
+          <main>
+            <div class="education">
+              <p>
+                Since I decided a year ago to transition into tech, I've been
+                learning like crazy: courses / tutorials through Udemy,
+                Skillshare, Coursera, YouTube, and my local college. I'm
+                extremely motivated...
+              </p>
+              <br />
+              <p>
+                I'm a UX / graphic designer as well as a frontend developer. I
+                use VSCode, Chrome DevTools, Figma & GitHub. I'm currently
+                incorporating SCSS into my flow.
+              </p>
+            </div>
+            <div class="progress-bars">
+              <h3>HTML5:</h3>
+              <div class="progress">
+                <div style="width: 100%"></div>
+              </div>
+              <h3>CSS3 (+ Flexbox/Grid):</h3>
+              <div class="progress">
+                <div style="width: 80%"></div>
+              </div>
+              <h3>JavaScript ES6:</h3>
+              <div class="progress">
+                <div style="width: 60%"></div>
+              </div>
+              <h3>Responsive Design:</h3>
+              <div class="progress">
+                <div style="width: 70%"></div>
+              </div>
+              <h3>Figma:</h3>
+              <div class="progress">
+                <div style="width: 70%"></div>
+              </div>
+              <h3>Adobe XD:</h3>
+              <div class="progress">
+                <div style="width: 70%"></div>
+              </div>
+              <h3>Adobe Photoshop:</h3>
+              <div class="progress">
+                <div style="width: 80%"></div>
+              </div>
+              <h3>Adobe Illustrator:</h3>
+              <div class="progress">
+                <div style="width: 70%"></div>
+              </div>
+            </div>
+          </main>
+          <div class="expanding-cards-container">
+            <div
+              class="panel active"
+              style="background-image: url(images/card1.jpg)"
+            >
+              <h3>
+                Growth Mindset: I <i class="fa-solid fa-heart"></i> learning. I
+                think it's why we're here.
+              </h3>
+            </div>
+            <div class="panel" style="background-image: url(images/card2.jpg)">
+              <h3>Conscientious: I pay attention to detail.</h3>
+            </div>
+            <div class="panel" style="background-image: url(images/card3.jpg)">
+              <h3>Visual Harmony: I have an eye for aesthetics.</h3>
+            </div>
+            <div class="panel" style="background-image: url(images/card4.jpg)">
+              <h3>Innovation: I delight in creative problem-solving.</h3>
+            </div>
+            <div class="panel" style="background-image: url(images/card5.jpg)">
+              <h3>UX Mindset: I build products with empathy for my users.</h3>
+            </div>
+          </div>
+          <div class="tech-skills-container"></div>
+        </section>
+
+        <!-- Section: Projects  -->
+        <section id="projects">
+          <header>
+            <h2 class="hero-text">Projects</h2>
+            <a href="#wrapper"><i class="fa-solid fa-chevron-up fa-3x"></i></a>
+          </header>
+          <div class="grid-wrapper">
+            <div class="my-website-description">
+              <h3>This Very Site</h3>
+              <p>
+                I had a lot of fun laying out / coding my personal website and
+                flexing my skills in design, HTML, CSS, and JavaScript. In the
+                process of bringing my vision to life, I learned a lot about
+                problem solving and working iteratively.
+              </p>
+            </div>
+            <div class="image" id="my-website-img"></div>
+            <div class="code-challenges-description">
+              <h3>Coding Challenges (HTML, CSS, & JavaScript)</h3>
+              <p>
+                <a href="https://www.frontendmentor.io/" target="_blank">
+                  FrontendMentor.io</a
+                >
+                challenges developers to build responsive and functional UIs /
+                web pages guided only by screenshots of finished products and
+                provided colors, fonts, and images. Click on thumbnails to see
+                my coded versions in action, or go to
+                <a href="https://github.com/SizzleCat" target="_blank">
+                  GitHub</a
+                >
+                to see my code.
+              </p>
+            </div>
+            <div class="image" id="challenge1"></div>
+            <div class="image" id="challenge2"></div>
+            <div class="image" id="challenge3"></div>
+            <div class="image" id="challenge4"></div>
+            <div class="image" id="challenge5"></div>
+            <div class="image" id="challenge6"></div>
+            <div class="image" id="challenge7"></div>
+            <div class="image" id="challenge8"></div>
+            <div class="website-design-description">
+              <h3>UX Process: Designing a Furniture Store Website</h3>
+              <p>
+                Through Daniel Scott's renowned
+                <a
+                  href="https://www.skillshare.com/classes/User-Experience-Design-Essentials-Adobe-XD-UI-UX-Design/1581992558?via=search-layout-grid"
+                  target="_blank"
+                  >UX Design Essentials with Adobe XD</a
+                >
+                course on Skillshare, I completed each stage of the design
+                process: research, wireframing for desktop and mobile, mood
+                board, choosing colors / fonts / images / icons, high-fidelity
+                mockups, and connecting up the prototype. You can click through
+                my
+                <a
+                  href="https://xd.adobe.com/view/d63c5bf5-d9fc-4856-8dbf-d31f3ff7f321-836f/?fullscreen&hints=off"
+                  target="_blank"
+                >
+                  finished prototype</a
+                >
+                to the contact modal, category page ("Living Room") and product
+                page ("Blue Velvet 2-Seater Sofa").
+              </p>
+            </div>
+            <div class="image" id="wireframes"></div>
+            <div class="image" id="hifi-mockups"></div>
+            <div class="digital-designs-description">
+              <h3>Digital Designs Using Adobe Creative Suite</h3>
+              <p>
+                See my
+                <a
+                  href="https://www.behance.net/gallery/109940553/Shannon-Maraghy-Graphic-Design-Portfolio"
+                  target="_blank"
+                >
+                  Behance portfolio
+                </a>
+                digital designs using Photoshop, Illustrator, InDesign, and
+                Dreamweaver. Below are a few examples:
+              </p>
+            </div>
+            <div class="image" id="gd1"></div>
+            <div class="image" id="gd2"></div>
+            <div class="image" id="gd3"></div>
+            <div class="image" id="gd4"></div>
+          </div>
+        </section>
+
+        <!-- Section: Contact  -->
+        <section id="contact">
+          <header>
+            <h2 class="hero-text">Contact</h2>
+            <a href="#wrapper"><i class="fa-solid fa-chevron-up fa-3x"></i></a>
+          </header>
+          <p id="footer">&copy; 2021 Shannon Maraghy. All rights reserved.</p>
+        </section>
+      </div>
+    </div>
+    <script src="hoverboard.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
