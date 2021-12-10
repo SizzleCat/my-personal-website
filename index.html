@@ -35,6 +35,10 @@
           <div id="home-left">
             <i class="fa-solid fa-circle-xmark fa-3x" id="x-mark"></i>
             <h1 class="hero-text">Hi :)</h1>
+            <video id="vid-small" width="130" height="200" controls>
+              <source src="images/me-video.mp4" />
+              Your browser does not support the video tag.
+            </video>
             <p>
               I'm Shannon Maraghy.
               <br />
@@ -43,8 +47,8 @@
               but I hope you can see my passion /<br />
               skills in the design & coding of my site...
             </p>
-            <video width="400" height="300" controls>
-              <source src="pexels_vid.mp4" type="video/mp4" />
+            <video id="vid" width="400" height="300" controls>
+              <source src="images/me-video.mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -81,7 +85,7 @@
               <p>
                 I'm a UX / graphic designer as well as a frontend developer. I
                 use VSCode, Chrome DevTools, Figma & GitHub. I'm currently
-                incorporating SCSS into my flow.
+                incorporating SCSS in my flow.
               </p>
             </div>
             <div class="progress-bars">
@@ -91,19 +95,19 @@
               </div>
               <h3>CSS3 (+ Flexbox/Grid):</h3>
               <div class="progress">
-                <div style="width: 80%"></div>
+                <div style="width: 85%"></div>
               </div>
               <h3>JavaScript ES6:</h3>
               <div class="progress">
-                <div style="width: 60%"></div>
+                <div style="width: 65%"></div>
               </div>
               <h3>Responsive Design:</h3>
               <div class="progress">
-                <div style="width: 70%"></div>
+                <div style="width: 85%"></div>
               </div>
               <h3>Figma:</h3>
               <div class="progress">
-                <div style="width: 70%"></div>
+                <div style="width: 75%"></div>
               </div>
               <h3>Adobe XD:</h3>
               <div class="progress">
@@ -122,24 +126,42 @@
           <div class="expanding-cards-container">
             <div
               class="panel active"
-              style="background-image: url(images/card1.jpg)"
+              style="background-image: url(images/expanding-cards/card1.jpg)"
             >
               <h3>
-                Growth Mindset: I <i class="fa-solid fa-heart"></i> learning. I
-                think it's why we're here.
+                Growth Mindset: I <i class="fa-solid fa-heart"></i> learning.
+                <span class="extra">I think it's why we're here.</span>
               </h3>
             </div>
-            <div class="panel" style="background-image: url(images/card2.jpg)">
+            <div
+              class="panel"
+              style="background-image: url(images/expanding-cards/card2.jpg)"
+            >
               <h3>Conscientious: I pay attention to detail.</h3>
             </div>
-            <div class="panel" style="background-image: url(images/card3.jpg)">
-              <h3>Visual Harmony: I have an eye for aesthetics.</h3>
+            <div
+              class="panel"
+              style="background-image: url(images/expanding-cards/card3.jpg)"
+            >
+              <h3>
+                <span class="extra">Visual </span> Harmony: I have an eye for
+                aesthetics.
+              </h3>
             </div>
-            <div class="panel" style="background-image: url(images/card4.jpg)">
-              <h3>Innovation: I delight in creative problem-solving.</h3>
+            <div
+              class="panel"
+              style="background-image: url(images/expanding-cards/card4.jpg)"
+            >
+              <h3>
+                Innovation: I delight in
+                <span class="extra">creative</span> problem-solving.
+              </h3>
             </div>
-            <div class="panel" style="background-image: url(images/card5.jpg)">
-              <h3>UX Mindset: I build products with empathy for my users.</h3>
+            <div
+              class="panel"
+              style="background-image: url(images/expanding-cards/card5.jpg)"
+            >
+              <h3>UX Mindset: I empathize with users.</h3>
             </div>
           </div>
           <div class="tech-skills-container"></div>
@@ -163,15 +185,16 @@
             </div>
             <div class="image" id="my-website-img"></div>
             <div class="code-challenges-description">
-              <h3>Coding Challenges (HTML, CSS, & JavaScript)</h3>
+              <h3>Coding Challenges (HTML, CSS & JavaScript)</h3>
               <p>
                 <a href="https://www.frontendmentor.io/" target="_blank">
                   FrontendMentor.io</a
                 >
                 challenges developers to build responsive and functional UIs /
                 web pages guided only by screenshots of finished products and
-                provided colors, fonts, and images. Click on thumbnails to see
-                my coded versions in action, or go to
+                provided colors, fonts, and images. Click on screenshots below
+                (courtesy of Frontend Mentor) to check out my coded versions in
+                action, or go to
                 <a href="https://github.com/SizzleCat" target="_blank">
                   GitHub</a
                 >
@@ -186,6 +209,8 @@
             <div class="image" id="challenge6"></div>
             <div class="image" id="challenge7"></div>
             <div class="image" id="challenge8"></div>
+            <div class="image" id="challenge9"></div>
+            <div class="image" id="challenge10"></div>
             <div class="website-design-description">
               <h3>UX Process: Designing a Furniture Store Website</h3>
               <p>
@@ -195,35 +220,41 @@
                   target="_blank"
                   >UX Design Essentials with Adobe XD</a
                 >
-                course on Skillshare, I completed each stage of the design
-                process: research, wireframing for desktop and mobile, mood
-                board, choosing colors / fonts / images / icons, high-fidelity
-                mockups, and connecting up the prototype. You can click through
-                my
+                Skillshare course, I completed each stage of the design process:
+                research, wireframing, mood board, choosing colors / fonts /
+                images / icons, making high-fidelity mockups, and connecting up
+                the prototype. Below, see how I translated my wireframes into
+                finished web pages. Or, click through my
                 <a
                   href="https://xd.adobe.com/view/d63c5bf5-d9fc-4856-8dbf-d31f3ff7f321-836f/?fullscreen&hints=off"
                   target="_blank"
                 >
-                  finished prototype</a
+                  final XD prototype</a
                 >
-                to the contact modal, category page ("Living Room") and product
-                page ("Blue Velvet 2-Seater Sofa").
+                to the Category Page ("Living Room"), Product Page ("Blue Velvet
+                2-Seater Sofa"), and Contact modal.
               </p>
             </div>
-            <div class="image" id="wireframes"></div>
-            <div class="image" id="hifi-mockups"></div>
+            <div class="image" id="wireframe1"></div>
+            <div class="image mockup" id="hifi-mockup1"></div>
+            <div class="image" id="wireframe2"></div>
+            <div class="image mockup" id="hifi-mockup2"></div>
+            <div class="image" id="wireframe3"></div>
+            <div class="image mockup" id="hifi-mockup3"></div>
+            <!-- <div class="image" id="wireframe4"></div>
+            <div class="image mockup" id="hifi-mockup4"></div> -->
             <div class="digital-designs-description">
-              <h3>Digital Designs Using Adobe Creative Suite</h3>
+              <h3>Digital Designs: Adobe Creative Suite</h3>
               <p>
-                See my
+                View my
                 <a
                   href="https://www.behance.net/gallery/109940553/Shannon-Maraghy-Graphic-Design-Portfolio"
                   target="_blank"
                 >
                   Behance portfolio
                 </a>
-                digital designs using Photoshop, Illustrator, InDesign, and
-                Dreamweaver. Below are a few examples:
+                of unique digital designs made with Photoshop, Illustrator,
+                InDesign, and Dreamweaver. Below are a few examples:
               </p>
             </div>
             <div class="image" id="gd1"></div>
@@ -239,6 +270,51 @@
             <h2 class="hero-text">Contact</h2>
             <a href="#wrapper"><i class="fa-solid fa-chevron-up fa-3x"></i></a>
           </header>
+          <main>
+            <div class="contact-info">
+              <div class="my-phone">
+                <i class="fas fa-phone-square-alt fa-3x"></i>
+                <h3>(626) 460-0060</h3>
+              </div>
+              <div class="my-email">
+                <i class="fas fa-envelope-square fa-3x"></i>
+                <h3>
+                  <a href="mailto:smaraghy@gmail.com">smaraghy@gmail.com</a>
+                </h3>
+              </div>
+            </div>
+          </main>
+          <form action="">
+            <div class="photo-marcia"></div>
+            <h4>Marcia and I would love to hear from you...</h4>
+            <input type="text" id="name" placeholder="Name" />
+            <input type="email" id="email" placeholder="Email" />
+            <textarea id="message" placeholder="Message"></textarea>
+            <input type="submit" id="submit" value="Submit" />
+          </form>
+          <div class="social-media">
+            <a href="https://github.com/SizzleCat" target="_blank">
+              <i class="fab fa-github-square fa-3x"></i>
+            </a>
+            <a
+              href="https://www.behance.net/gallery/109940553/Shannon-Maraghy-Graphic-Design-Portfolio"
+              target="_blank"
+            >
+              <i class="fab fa-behance-square fa-3x"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/shannonmaraghy/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin fa-3x"></i
+            ></a>
+            <a href="https://twitter.com/ShannonMaraghy" target="_blank">
+              <i class="fab fa-twitter-square fa-3x"></i
+            ></a>
+            <a href="https://www.instagram.com/shannonmaraghy/" target="_blank">
+              <i class="fab fa-instagram-square fa-3x"></i
+            ></a>
+          </div>
           <p id="footer">&copy; 2021 Shannon Maraghy. All rights reserved.</p>
         </section>
       </div>

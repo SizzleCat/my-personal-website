@@ -26,11 +26,12 @@ function unRotateScreen() {
   body.classList.remove("show-overflow");
   links.forEach((link) => {
     setTimeout(function () {
-      link.style.transform = "translateX(200%)";
+      link.style.transform = "translateX(400%)";
     }, 1000);
   });
 }
 
+// expand panels (skills section)
 panels = document.querySelectorAll(".panel");
 
 panels.forEach((panel) => {
@@ -45,3 +46,33 @@ function removeActiveClasses() {
     panel.classList.remove("active");
   });
 }
+
+// mockups slide right (projects section)
+const mockups = document.querySelectorAll(".mockup");
+
+window.addEventListener("scroll", checkMockups);
+
+checkMockups();
+
+function checkMockups() {
+  const triggerBottom = window.innerHeight * 0.65;
+
+  mockups.forEach((mockup) => {
+    const mockupTop = mockup.getBoundingClientRect().top;
+
+    console.log(mockup.getBoundingClientRect());
+
+    if (mockupTop < triggerBottom) {
+      mockup.classList.remove("mockup");
+      mockup.classList.add("slide-right");
+    } else {
+      mockup.classList.remove("slide-right");
+      mockup.classList.add("mockup");
+    }
+  });
+}
+
+// contact form
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const message = document.getElementById("message");
