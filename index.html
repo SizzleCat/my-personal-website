@@ -23,7 +23,9 @@
         <div class="stripe">
           <img src="images/logo.png" alt="logo" id="logo" />
           <h1 class="creative">creative</h1>
-          <h1 class="frontend">frontend developer</h1>
+          <h1 class="frontend">
+            <span class="mobile-hide">frontend </span>developer
+          </h1>
         </div>
         <div class="hoverboard-container" id="hoverboard-container"></div>
       </div>
@@ -35,17 +37,22 @@
           <div id="home-left">
             <i class="fa-solid fa-circle-xmark fa-3x" id="x-mark"></i>
             <h1 class="hero-text">Hi :)</h1>
-            <video id="vid-small" width="130" height="200" controls>
+            <video id="vid-small" width="130" height="180" controls>
               <source src="images/me-video.mp4" />
               Your browser does not support the video tag.
             </video>
-            <p>
+            <p class="default-text">
               I'm Shannon Maraghy.
               <br />
               My resume may be light on<br />
               work experience for the moment, <br />
               but I hope you can see my passion /<br />
               skills in the design & coding of my site...
+            </p>
+            <p class="mobile-text">
+              I'm Shannon Maraghy. My resume may be light on work experience for
+              the moment, but I hope you can see my passion / skills in the
+              design & coding of my site...
             </p>
             <video id="vid" width="400" height="300" controls>
               <source src="images/me-video.mp4" />
@@ -129,7 +136,8 @@
               style="background-image: url(images/expanding-cards/card1.jpg)"
             >
               <h3>
-                Growth Mindset: I <i class="fa-solid fa-heart"></i> learning.
+                <span class="mobile-hide">Growth Mindset: </span>I
+                <i class="fa-solid fa-heart"></i> learning.
                 <span class="extra">I think it's why we're here.</span>
               </h3>
             </div>
@@ -137,19 +145,26 @@
               class="panel"
               style="background-image: url(images/expanding-cards/card2.jpg)"
             >
-              <h3>Conscientious: I pay attention to detail.</h3>
+              <h3>
+                <span class="mobile-hide">Conscientious: </span>I pay
+                attention<br class="mobile-show" />
+                to detail.
+              </h3>
             </div>
             <div
               class="panel"
               style="background-image: url(images/expanding-cards/card3.jpg)"
             >
               <h3>
-                <span class="extra">Visual </span> Harmony: I have an eye for
-                aesthetics.
+                <span class="extra">Visual </span>
+                <span class="mobile-hide">Harmony: </span>I have an eye<br
+                  class="mobile-show"
+                />
+                for aesthetics.
               </h3>
             </div>
             <div
-              class="panel"
+              class="panel mobile-hide"
               style="background-image: url(images/expanding-cards/card4.jpg)"
             >
               <h3>
@@ -158,7 +173,7 @@
               </h3>
             </div>
             <div
-              class="panel"
+              class="panel mobile-hide"
               style="background-image: url(images/expanding-cards/card5.jpg)"
             >
               <h3>UX Mindset: I empathize with users.</h3>
@@ -180,7 +195,7 @@
                 I had a lot of fun laying out / coding my personal website and
                 flexing my skills in design, HTML, CSS, and JavaScript. In the
                 process of bringing my vision to life, I learned a lot about
-                problem solving and working iteratively.
+                problem solving, working iteratively, and responsive design.
               </p>
             </div>
             <div class="image" id="my-website-img"></div>
@@ -241,8 +256,6 @@
             <div class="image mockup" id="hifi-mockup2"></div>
             <div class="image" id="wireframe3"></div>
             <div class="image mockup" id="hifi-mockup3"></div>
-            <!-- <div class="image" id="wireframe4"></div>
-            <div class="image mockup" id="hifi-mockup4"></div> -->
             <div class="digital-designs-description">
               <h3>Digital Designs: Adobe Creative Suite</h3>
               <p>
@@ -286,7 +299,7 @@
           </main>
           <form action="">
             <div class="photo-marcia"></div>
-            <h4>Marcia and I would love to hear from you...</h4>
+            <h4>Marcia & I would love to hear from you...</h4>
             <input type="text" id="name" placeholder="Name" />
             <input type="email" id="email" placeholder="Email" />
             <textarea id="message" placeholder="Message"></textarea>
@@ -315,7 +328,10 @@
               <i class="fab fa-instagram-square fa-3x"></i
             ></a>
           </div>
-          <p id="footer">&copy; 2021 Shannon Maraghy. All rights reserved.</p>
+          <p id="footer">
+            &copy; 2021 Shannon Maraghy. <br class="mobile-show" />All rights
+            reserved.
+          </p>
         </section>
       </div>
     </div>

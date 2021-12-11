@@ -12,7 +12,7 @@ body {
   font-family: "Spartan", sans-serif;
   font-weight: 500;
   color: #000;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .show-overflow {
@@ -23,7 +23,7 @@ body {
   position: relative;
 }
 
-/* rotating cover: extra-large screens  */
+/* rotating cover: extra-wide screens  */
 .rotating-container {
   width: 1200px;
   display: flex;
@@ -119,7 +119,7 @@ h1 {
   transition-duration: 0s;
 }
 
-/* inner content: extra-large screens  */
+/* inner content: extra-wide screens  */
 .inner-content {
   width: 1200px;
   background: linear-gradient(to right, #84f4ff, #9effaa);
@@ -129,7 +129,7 @@ h1 {
 }
 
 section {
-  padding-top: 3rem;
+  padding-top: 2rem;
   margin-bottom: 4rem;
 }
 
@@ -176,7 +176,10 @@ p {
   font-weight: 600;
   line-height: 1.7;
   color: #000;
-  margin: 0.5rem 0;
+}
+
+p.mobile-text {
+  display: none;
 }
 
 #vid {
@@ -204,7 +207,6 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #000;
-  padding-bottom: 0.5rem;
 }
 
 a:hover {
@@ -250,7 +252,7 @@ a:hover {
 
 .panel {
   background-size: cover;
-  background-position: center;
+  background-position: 50% 60%;
   background-repeat: no-repeat;
   height: 30vh;
   border-radius: 20px;
@@ -296,6 +298,10 @@ a:hover {
   color: red;
 }
 
+.mobile-show {
+  display: none;
+}
+
 .panel.active {
   flex: 5;
 }
@@ -310,7 +316,6 @@ a:hover {
 }
 
 .panel:not(.active):hover {
-  /* opacity: 0.8; */
   transform: scale(1.05);
   cursor: pointer;
 }
@@ -535,7 +540,7 @@ p a:hover {
 #contact {
   display: flex;
   flex-direction: column;
-  padding-bottom: 01rem;
+  padding-bottom: 1rem;
   justify-content: space-between;
 }
 
@@ -545,12 +550,7 @@ p a:hover {
   align-items: flex-end;
 }
 
-.my-phone {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
+.my-phone,
 .my-email {
   display: flex;
   align-items: center;
@@ -558,7 +558,7 @@ p a:hover {
 }
 
 .contact-info i {
-  margin: 0 1rem 1rem 0;
+  margin-right: 1rem;
 }
 
 #contact h3 {
@@ -633,6 +633,9 @@ form h4 {
   font-weight: 600;
   border: none;
   border-radius: 5px;
+  display: inline-block;
+  /* align-items: center;
+  justify-content: center; */
 }
 
 input,
@@ -671,7 +674,191 @@ p#footer {
   text-align: center;
 }
 
-/* for large screens  */
+/* nested media query: extra-extra-wide + short */
+@media (min-width: 1401px) {
+  @media (max-height: 950px) {
+    .fa-circle-xmark {
+      margin: 0 0 1rem 0;
+      font-size: 54px;
+    }
+
+    #vid {
+      display: block;
+      height: 200px;
+      width: 200px;
+    }
+
+    #vid-small {
+      display: none;
+    }
+
+    #home h1 {
+      font-size: 80px;
+      margin: 4rem 0 1rem 0;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    #skills main {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .education {
+      margin-bottom: 2rem;
+    }
+
+    .progress {
+      height: 20px;
+    }
+
+    .progress-bars {
+      position: absolute;
+      top: -25%;
+      right: 0;
+      width: 45%;
+    }
+
+    .progress-bars h3 {
+      font-size: 16px;
+    }
+
+    #projects h2 {
+      margin-bottom: 3rem;
+    }
+
+    .photo-marcia {
+      width: 300px;
+      height: 200px;
+      top: -75%;
+    }
+
+    #contact i {
+      font-size: 3rem;
+    }
+
+    form {
+      grid-template-rows: 40px 40px 80px 45px;
+      gap: 1rem;
+    }
+
+    #contact h4 {
+      font-size: 24px;
+    }
+
+    #contact h3,
+    input#submit {
+      font-size: 20px;
+      padding-top: 5px;
+    }
+
+    ::placeholder {
+      font-size: 14px;
+      color: #3a3734;
+      font-weight: 400;
+    }
+  }
+}
+
+/* nested media query: extra wide + short */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  @media (max-height: 950px) {
+    .fa-circle-xmark {
+      margin: 0 0 1rem 0;
+    }
+
+    #vid {
+      display: none;
+    }
+
+    #vid-small {
+      display: block;
+      margin: 2rem 0;
+    }
+
+    #home h1 {
+      font-size: 42px;
+      font-weight: 500;
+    }
+
+    .hero-text {
+      font-size: 72px;
+      margin: 1.5rem 1rem 1rem 0;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    #skills main {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .education {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+
+    .progress {
+      height: 15px;
+    }
+
+    .progress-bars {
+      position: absolute;
+      top: -35%;
+      right: 0;
+      width: 45%;
+    }
+
+    .progress-bars h3 {
+      font-size: 16px;
+    }
+
+    #projects h2 {
+      margin-bottom: 3rem;
+    }
+
+    .photo-marcia {
+      width: 300px;
+      height: 200px;
+      top: -75%;
+    }
+
+    #contact i {
+      font-size: 3rem;
+    }
+
+    form {
+      grid-template-rows: 40px 40px 80px 45px;
+      gap: 1rem;
+    }
+
+    #contact h4 {
+      font-size: 24px;
+    }
+
+    #contact h3,
+    input#submit {
+      font-size: 20px;
+      padding-top: 5px;
+    }
+
+    ::placeholder {
+      font-size: 14px;
+      color: #3a3734;
+      font-weight: 400;
+    }
+  }
+}
+
+/* for wide screens  */
 @media (max-width: 1199px) {
   .rotating-container {
     width: 1024px;
@@ -718,49 +905,92 @@ p#footer {
       700px 100px 300px auto 280px 380px;
   }
 
-  /* nested media query for Chromebooks */
+  /* nested media query: wide + short */
   @media (max-height: 950px) {
+    .fa-circle-xmark {
+      margin: 0 0 1rem 0;
+    }
+
     #vid {
       display: none;
     }
 
     #vid-small {
       display: block;
-      margin: 1rem 0;
+      margin: 2rem 0;
     }
 
     #home h1 {
-      font-size: 54px;
-      margin: 1rem 0;
+      font-size: 42px;
+      font-weight: 500;
+    }
+
+    .hero-text {
+      font-size: 72px;
+      margin: 1.5rem 1rem 1rem 0;
     }
 
     p {
       font-size: 18px;
     }
 
-    .progress-bars {
+    #skills main {
       position: relative;
-      top: -20%;
+    }
+
+    .progress {
+      height: 15px;
+    }
+
+    .progress-bars {
+      position: absolute;
+      top: -35%;
+      right: 0;
+      width: 45%;
     }
 
     .progress-bars h3 {
       font-size: 16px;
     }
 
-    .expanding-cards-container {
-      position: relative;
-      top: -80%;
+    #projects h2 {
+      margin-bottom: 3rem;
     }
 
     .photo-marcia {
       width: 300px;
       height: 200px;
-      top: -60%;
+      top: -75%;
+    }
+
+    #contact i {
+      font-size: 3rem;
+    }
+
+    form {
+      grid-template-rows: 40px 40px 80px 45px;
+      gap: 1rem;
+    }
+
+    #contact h4 {
+      font-size: 24px;
+    }
+
+    #contact h3,
+    input#submit {
+      font-size: 20px;
+      padding-top: 5px;
+    }
+
+    ::placeholder {
+      font-size: 14px;
+      color: #3a3734;
+      font-weight: 400;
     }
   }
 }
 
-/* for medium screens */
+/* for medium screens & tablets */
 @media (max-width: 1023px) {
   .rotating-container {
     width: 768px;
@@ -939,28 +1169,32 @@ p#footer {
     margin-top: 7rem;
   }
 
-  /* nested media query for Chromebooks */
+  /* nested media query: medium + short */
   @media (max-height: 950px) {
+    .hamburger {
+      font-size: 2.5rem;
+    }
+
     video {
       display: none;
     }
 
-    #contact {
-      height: auto;
+    nav ul li {
+      margin: 1.5rem 0 0 0;
+      font-size: 36px;
+    }
+
+    .progress-bars {
+      top: 0;
     }
   }
 }
 
-/* for tablets */
+/* mobile */
 @media (max-width: 767px) {
   .rotating-container {
-    width: 480px;
-    margin-left: -240px;
-  }
-
-  .inner-content {
-    width: 480px;
-    padding: 5rem 2rem 1rem 2rem;
+    width: 374px;
+    margin-left: -187px;
   }
 
   .hamburger {
@@ -969,19 +1203,29 @@ p#footer {
 
   .stripe {
     margin-left: 0;
-    width: 110px;
+    width: 120px;
   }
 
   #logo {
     height: 200px;
   }
 
-  h1 {
-    font-size: 24px;
+  .stripe h1 {
+    font-size: 26px;
+    margin: 5px 0;
+  }
+
+  .mobile-hide {
+    display: none;
   }
 
   .frontend {
-    left: 185px;
+    left: 138px;
+  }
+
+  .inner-content {
+    width: 374px;
+    padding: 5rem 2rem 1rem 2rem;
   }
 
   #home {
@@ -993,29 +1237,41 @@ p#footer {
     position: relative;
   }
 
+  #home h1 {
+    margin-top: 3rem;
+    font-size: 56px;
+  }
+
   .fa-circle-xmark {
     font-size: 2.5rem;
   }
 
-  .hero-text {
-    font-size: 50px;
-    margin: 2rem 0;
+  h2.hero-text {
+    font-size: 56px;
   }
 
   p {
     font-size: 16px;
   }
 
-  video {
-    width: 200px;
+  p.default-text {
+    display: none;
+  }
+
+  p.mobile-text {
+    display: inline;
+  }
+
+  #vid-small {
+    width: 180px;
     height: 250px;
-    margin-top: 1rem;
+    margin: 3rem 0;
   }
 
   nav {
     position: absolute;
-    right: 1rem;
-    bottom: 3rem;
+    right: 0;
+    bottom: 14rem;
   }
 
   nav ul {
@@ -1023,16 +1279,57 @@ p#footer {
   }
 
   nav ul li {
-    font-size: 36px;
+    font-size: 24px;
     margin: 1.5rem 0;
+    font-weight: 500;
   }
 
   .extra {
     display: none;
   }
 
+  .fa-chevron-up {
+    font-size: 2rem;
+  }
+
+  section {
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  #skills main {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  .education {
+    margin-bottom: 2rem;
+  }
+
+  .progress-bars {
+    position: static;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .panel {
+    flex: 0.9;
+  }
+
+  .panel h3 {
+    text-align: center;
+  }
+
+  .mobile-show {
+    display: inline;
+  }
+
+  #projects h2.hero-text {
+    margin-bottom: 1rem;
+  }
+
   #projects h3 {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 1rem;
   }
@@ -1041,48 +1338,48 @@ p#footer {
     row-gap: 20px;
     column-gap: 20px;
     grid-template-rows:
-      375px auto auto 200px 270px 200px 210px auto 500px 300px
-      500px 70px 200px auto 200px 280px;
-  }
-
-  .my-website-description {
-    grid-column: 1 / 5;
-    grid-row: 2;
+      250px auto auto 200px 270px 200px 210px auto 200px 100px
+      200px 50px 100px auto 200px 200px 200px 200px;
   }
 
   #my-website-img {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     grid-row: 1;
-    margin: 1rem 0;
   }
 
-  .code-challenges-description {
-    grid-row: 3;
-  }
-
-  #challenge1,
-  #challenge2 {
+  #challenge1 {
     grid-row: 4;
+    grid-column: 1 / 5;
   }
 
+  #challenge2,
   #challenge3,
+  #challenge6,
+  #challenge6,
+  #challenge7,
+  #challenge9 {
+    display: none;
+  }
+
   #challenge4 {
     grid-row: 5;
+    grid-column: 1 / 3;
+    margin: 0;
   }
 
-  #challenge5,
-  #challenge6 {
+  #challenge5 {
     grid-row: 5;
+    grid-column: 3 / 5;
   }
 
-  #challenge7,
   #challenge8 {
     grid-row: 6;
+    grid-column: 1 / 5;
   }
 
-  #challenge9,
   #challenge10 {
     grid-row: 7;
+    grid-column: 1 / 5;
   }
 
   .website-design-description {
@@ -1122,47 +1419,106 @@ p#footer {
     grid-row: 14;
   }
 
-  #gd1,
-  #gd2 {
+  #gd1 {
     grid-row: 15;
+    grid-column: 1 / 5;
   }
 
-  #gd3,
-  #gd4 {
+  #gd2 {
     grid-row: 16;
+    grid-column: 1 / 5;
+    background-size: 130%;
+    background-position: left top;
+  }
+
+  #gd3 {
+    grid-row: 17;
+    grid-column: 1 / 5;
+  }
+
+  #gd4 {
+    grid-row: 18;
+    grid-column: 1 / 5;
   }
 
   #contact {
     justify-content: flex-start;
+    padding-bottom: 0;
   }
 
-  .photo-marcia {
-    width: 250px;
-    height: 180px;
-    top: -65%;
+  #contact .fa-chevron-up {
+    font-size: 2rem;
   }
 
   #contact h3 {
-    font-size: 20px;
-    margin: 1rem 0;
+    font-size: 18px;
+    margin: 0.75rem 0;
   }
 
   form {
-    grid-template-rows: 50px 40px 130px 50px;
-    gap: 15px;
-    padding: 20px;
+    grid-template-rows: 200px 80px 35px 35px 100px 40px;
+    gap: 2 rem;
+    padding: 1rem;
     margin: 3rem 0;
   }
 
-  #submit {
+  .photo-marcia {
+    position: static;
+    width: 100%;
+    height: 200px;
+    grid-row: 1;
+    grid-column: 1 / 5;
+    background-size: cover;
+  }
+
+  form h4 {
+    grid-column: 1 / 5;
+    grid-row: 2;
+  }
+
+  #contact h4 {
     font-size: 20px;
+    margin: 1rem 0.5rem;
+  }
+
+  #name {
+    grid-column: 1 / 5;
+    grid-row: 3;
+  }
+
+  #email {
+    grid-column: 1 / 5;
+    grid-row: 4;
+  }
+
+  #message {
+    grid-column: 1 / 5;
+    grid-row: 5;
+  }
+
+  #submit {
+    grid-column: 1 / 5;
+    grid-row: 6;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  input {
+    padding: 1rem 0.5rem;
+  }
+
+  textarea {
+    padding-top: 1rem;
+    resize: none;
+  }
+
+  .social-media i {
+    font-size: 2rem;
+    margin: 0 5px 5px 5px;
   }
 
   #footer {
     font-size: 16px;
-    margin-top: 7rem;
+    margin-top: 2rem;
   }
 }
-
-/* nested media query for Chromebooks */
-@media (max-height: 767px);
