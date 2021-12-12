@@ -55,7 +55,7 @@ window.addEventListener("scroll", checkMockups);
 checkMockups();
 
 function checkMockups() {
-  const triggerBottom = window.innerHeight * 0.65;
+  const triggerBottom = window.innerHeight * 0.85;
 
   mockups.forEach((mockup) => {
     const mockupTop = mockup.getBoundingClientRect().top;
