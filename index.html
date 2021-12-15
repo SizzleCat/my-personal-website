@@ -34,50 +34,56 @@
       <div class="inner-content">
         <!-- Section: Home  -->
         <section id="home" class="home">
-          <div id="home-left">
-            <i class="fa-solid fa-circle-xmark fa-3x" id="x-mark"></i>
-            <h1 class="hero-text">Hi :)</h1>
-            <video id="vid-small" width="130" height="180" controls>
-              <source src="images/me-video.mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <p class="default-text">
-              I'm Shannon Maraghy.
-              <br />
-              My resume may be light on<br />
-              work experience for the moment, <br />
-              but I hope you can see my passion /<br />
-              skills in the design & coding of my site...
-            </p>
-            <p class="mobile-text">
-              I'm Shannon Maraghy. My resume may be light on work experience for
-              the moment, but I hope you can see my passion / skills in the
-              design & coding of my site...
-            </p>
-            <video id="vid" width="400" height="300" controls>
-              <source src="images/me-video.mp4" />
-              Your browser does not support the video tag.
-            </video>
+          <i class="fa-solid fa-circle-xmark fa-3x" id="x-mark"></i>
+          <div id="home-bottom">
+            <div id="home-left">
+              <h1>Hi :)</h1>
+              <video id="vid-small" width="130" height="180" controls>
+                <source src="images/me-video.mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <p class="default-text">
+                I'm Shannon Maraghy.
+                <br />
+                My resume may be light on<br />
+                work experience for the moment, <br />
+                but I hope you can see my passion /<br />
+                skills in the design & coding of my site...
+              </p>
+              <p class="mobile-text">
+                I'm Shannon Maraghy. My resume may be light on work experience
+                for the moment, but I hope you can see my passion / skills in
+                the design & coding of my site...
+              </p>
+              <video id="vid" width="200" height="300" controls>
+                <source src="images/me-video.mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <nav id="home-right">
+              <video id="vid-right" width="200" height="300" controls>
+                <source src="images/me-video.mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <ul>
+                <li id="about-link">
+                  <a href="#skills">Skills</a>
+                </li>
+                <li id="projects-link">
+                  <a href="#projects">Projects</a>
+                </li>
+                <li id="contact-link">
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <nav id="home-right">
-            <ul>
-              <li id="about-link">
-                <a href="#skills">Skills</a>
-              </li>
-              <li id="projects-link">
-                <a href="#projects">Projects</a>
-              </li>
-              <li id="contact-link">
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </nav>
         </section>
 
         <!-- Section: Skills  -->
         <section id="skills">
           <header>
-            <h2 class="hero-text">Skills</h2>
+            <h2>Skills</h2>
             <a href="#wrapper"><i class="fa-solid fa-chevron-up fa-3x"></i></a>
           </header>
           <main>
@@ -168,7 +174,7 @@
               style="background-image: url(images/expanding-cards/card4.jpg)"
             >
               <h3>
-                Innovation: I delight in
+                Innovative: I delight in
                 <span class="extra">creative</span> problem-solving.
               </h3>
             </div>
@@ -185,7 +191,7 @@
         <!-- Section: Projects  -->
         <section id="projects">
           <header>
-            <h2 class="hero-text">Projects</h2>
+            <h2>Projects</h2>
             <a href="#wrapper"><i class="fa-solid fa-chevron-up fa-3x"></i></a>
           </header>
           <div class="grid-wrapper">
@@ -280,23 +286,22 @@
         <!-- Section: Contact  -->
         <section id="contact">
           <header>
-            <h2 class="hero-text">Contact</h2>
+            <h2>Contact</h2>
             <a href="#wrapper"><i class="fa-solid fa-chevron-up fa-3x"></i></a>
           </header>
-          <main>
-            <div class="contact-info">
-              <div class="my-phone">
-                <i class="fas fa-phone-square-alt fa-3x"></i>
-                <h3>(626) 460-0060</h3>
-              </div>
-              <div class="my-email">
-                <i class="fas fa-envelope-square fa-3x"></i>
-                <h3>
-                  <a href="mailto:smaraghy@gmail.com">smaraghy@gmail.com</a>
-                </h3>
-              </div>
+
+          <div class="contact-info">
+            <div class="my-phone">
+              <i class="fas fa-phone-square-alt fa-3x"></i>
+              <h3>(626) 460-0060</h3>
             </div>
-          </main>
+            <div class="my-email">
+              <i class="fas fa-envelope-square fa-3x"></i>
+              <h3>
+                <a href="mailto:smaraghy@gmail.com">smaraghy@gmail.com</a>
+              </h3>
+            </div>
+          </div>
           <form action="">
             <div class="photo-marcia"></div>
             <h4>Marcia & I would love to hear from you...</h4>
@@ -305,6 +310,7 @@
             <textarea id="message" placeholder="Message"></textarea>
             <input type="submit" id="submit" value="Submit" />
           </form>
+
           <div class="social-media">
             <a href="https://github.com/SizzleCat" target="_blank">
               <i class="fab fa-github-square fa-3x"></i>
@@ -328,10 +334,12 @@
               <i class="fab fa-instagram-square fa-3x"></i
             ></a>
           </div>
-          <p id="footer">
-            &copy; 2021 Shannon Maraghy. <br class="mobile-show" />All rights
-            reserved.
-          </p>
+          <footer>
+            <p>
+              &copy; 2021 Shannon Maraghy. <br class="mobile-show" />All rights
+              reserved.
+            </p>
+          </footer>
         </section>
       </div>
     </div>

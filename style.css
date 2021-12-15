@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;500;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -75,19 +75,19 @@ body {
   margin: 0 2rem 1rem 0;
 }
 
-h1 {
+.stripe h1 {
   font-size: 54px;
   font-weight: 400;
   line-height: 1.3;
 }
 
-.creative {
+h1.creative {
   transform: skewX(10deg);
   padding: 0 50px;
   margin-top: 20px;
 }
 
-.frontend {
+h1.frontend {
   color: #fff;
   transform: skewX(10deg);
   position: relative;
@@ -123,19 +123,24 @@ h1 {
 .inner-content {
   width: 1200px;
   background: linear-gradient(to right, #84f4ff, #9effaa);
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 10rem auto;
   padding: 0 4rem;
   border-radius: 0 0 10px 10px;
 }
 
 section {
-  padding-top: 2rem;
+  padding-top: 4rem;
   margin-bottom: 5rem;
 }
 
 header {
   display: flex;
   align-items: center;
+  margin-bottom: 3rem;
+}
+
+header i {
+  margin-left: 2rem;
 }
 
 a {
@@ -149,15 +154,23 @@ header i:hover {
 
 /* Section: Home */
 .home {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding-bottom: 3rem;
+  padding: 9rem 0 3rem 0;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#home-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
 }
 
 .fa-circle-xmark {
-  margin: 0 0 2rem 0;
+  margin: 0 0 4rem 0;
   cursor: pointer;
 }
 
@@ -165,10 +178,23 @@ header i:hover {
   color: #2672ec;
 }
 
-.hero-text {
+.home h1 {
+  font-size: 80px;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+h2 {
   font-size: 80px;
   font-weight: 400;
-  margin: 1rem 2rem 2rem 0;
+  margin: 0;
+}
+
+#home-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
 }
 
 p {
@@ -187,13 +213,20 @@ p.mobile-text {
   border-radius: 10px;
 }
 
-#vid-small {
+#vid-small,
+#vid-right {
   display: none;
+}
+
+#home-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  align-self: flex-end;
 }
 
 ul {
   list-style: none;
-  margin-right: 1rem;
 }
 
 nav ul li {
@@ -216,13 +249,12 @@ a:hover {
 /* Section: Skills */
 #skills {
   height: auto;
-  margin-bottom: 4rem;
 }
 
 #skills main {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2rem;
+  gap: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -233,7 +265,7 @@ a:hover {
 
 .progress {
   overflow: hidden;
-  height: 20px;
+  height: 15px;
   background: #eee;
   margin-bottom: 1rem;
   border-radius: 5px;
@@ -255,7 +287,7 @@ a:hover {
   background-size: cover;
   background-position: 50% 60%;
   background-repeat: no-repeat;
-  height: 30vh;
+  height: 260px;
   border-radius: 20px;
   flex: 0.3;
   overflow: hidden;
@@ -324,7 +356,7 @@ a:hover {
 /* Section: Projects */
 #projects {
   height: auto;
-  margin-bottom: 4rem;
+  margin-bottom: 7rem;
 }
 
 #projects h3 {
@@ -544,18 +576,8 @@ p a:hover {
   flex-direction: column;
   padding-bottom: 1rem;
   justify-content: space-between;
-  height: auto;
+  height: 100vh;
   margin: 0;
-}
-
-#contact main {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.contact-info {
-  margin-bottom: 2rem;
 }
 
 .my-phone,
@@ -674,190 +696,92 @@ textarea:focus {
 }
 
 .social-media i {
-  margin: 0 2rem 2rem 2rem;
+  margin: 0 2rem;
 }
 
-p#footer {
+footer p {
   text-align: center;
-  margin-top: 5rem;
-}
-
-/* nested media query: extra-extra-wide + short */
-@media (min-width: 1401px) {
-  @media (max-height: 950px) {
-    .fa-circle-xmark {
-      margin: 0 0 1rem 0;
-      font-size: 54px;
-    }
-
-    #vid {
-      display: block;
-      height: 200px;
-      width: 200px;
-    }
-
-    #vid-small {
-      display: none;
-    }
-
-    #home h1 {
-      font-size: 80px;
-      margin: 4rem 0 1rem 0;
-    }
-
-    p {
-      font-size: 20px;
-    }
-
-    #skills main {
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-bottom: 2rem;
-      position: relative;
-    }
-
-    .education {
-      margin-bottom: 2rem;
-    }
-
-    .progress {
-      height: 20px;
-    }
-
-    .progress-bars {
-      position: absolute;
-      top: -25%;
-      right: 0;
-      width: 45%;
-    }
-
-    .progress-bars h3 {
-      font-size: 16px;
-    }
-
-    #projects h2 {
-      margin-bottom: 3rem;
-    }
-
-    #contact {
-      height: auto;
-    }
-
-    .photo-marcia {
-      width: 300px;
-      height: 200px;
-      top: -75%;
-    }
-
-    #contact i {
-      font-size: 3rem;
-    }
-
-    form {
-      grid-template-rows: 40px 40px 80px 45px;
-      gap: 1rem;
-    }
-
-    #contact h4 {
-      font-size: 24px;
-    }
-
-    #contact h3,
-    input#submit {
-      font-size: 20px;
-      padding-top: 5px;
-    }
-
-    ::placeholder {
-      font-size: 14px;
-      color: #3a3734;
-      font-weight: 400;
-    }
-  }
+  margin: 2rem 0 0 0;
+  font-size: 1rem;
 }
 
 /* nested media query: extra wide + short */
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1200px) {
   @media (max-height: 950px) {
-    .fa-circle-xmark {
-      margin: 0 0 1rem 0;
+    #vid-right {
+      display: block;
+      margin-right: 3rem;
+      height: 250px;
+      width: 200px;
     }
 
-    #vid {
+    #vid,
+    #vid-small {
       display: none;
     }
 
-    #vid-small {
-      display: block;
-      margin: 2rem 0;
-    }
-
-    #home h1 {
-      font-size: 42px;
-      font-weight: 500;
-    }
-
-    .hero-text {
-      font-size: 72px;
-      margin: 1.5rem 1rem 1rem 0;
-    }
-
-    p {
-      font-size: 18px;
+    nav ul li {
+      margin: 2rem 0 0 0;
     }
 
     #skills main {
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       position: relative;
-    }
-
-    .education {
-      width: 100%;
-      margin-bottom: 4rem;
-    }
-
-    .progress {
-      height: 15px;
     }
 
     .progress-bars {
       position: absolute;
-      top: -35%;
+      top: -20%;
       right: 0;
-      width: 45%;
+      width: 47%;
     }
 
     .progress-bars h3 {
       font-size: 16px;
     }
 
-    #projects h2 {
-      margin-bottom: 3rem;
-    }
-
-    .photo-marcia {
-      width: 300px;
-      height: 200px;
-      top: -75%;
-    }
-
     #contact {
       height: auto;
-    }
-
-    #contact i {
-      font-size: 3rem;
+      margin-top: 0;
     }
 
     form {
-      grid-template-rows: 40px 40px 80px 45px;
-      gap: 1rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 45px 45px 100px 45px;
+      width: 100%;
+    }
+
+    .photo-marcia {
+      height: 100%;
+      position: static;
+      grid-row: 1 / 5;
+      grid-column: 1 / 2;
     }
 
     #contact h4 {
       font-size: 24px;
+      grid-column: 2 / 4;
+    }
+
+    #name {
+      grid-row: 2;
+      grid-column: 2 / 3;
+    }
+
+    #email {
+      grid-row: 2;
+      grid-column: 3 / 4;
+    }
+
+    #message {
+      grid-row: 3;
+      grid-column: 2 / 4;
+    }
+
+    #submit {
+      grid-row: 4;
     }
 
     #contact h3,
@@ -874,8 +798,8 @@ p#footer {
   }
 }
 
-/* for wide screens  */
-@media (max-width: 1199px) {
+/* for wide screens, including large tablets */
+@media (max-width: 1199px) and (min-width: 1024px) {
   .rotating-container {
     width: 1024px;
     margin-left: -512px;
@@ -889,20 +813,19 @@ p#footer {
     margin-left: 50px;
   }
 
-  .hero-text {
-    font-size: 70px;
+  .home h1 {
+    font-size: 60px;
+    font-weight: 500;
+    margin: 3rem 0 2rem 0;
   }
 
   nav ul {
     text-align: right;
-    margin-right: 0;
   }
 
   #skills main {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 3rem;
   }
 
   .progress-bars h3 {
@@ -914,8 +837,6 @@ p#footer {
   }
 
   .grid-wrapper {
-    row-gap: 30px;
-    column-gap: 30px;
     grid-template-rows:
       320px auto 270px 370px 280px 310px auto 700px 300px
       700px 100px 300px auto 280px 380px;
@@ -923,8 +844,8 @@ p#footer {
 
   /* nested media query: wide + short */
   @media (max-height: 950px) {
-    .fa-circle-xmark {
-      margin: 0 0 1rem 0;
+    .home h1 {
+      margin: 1rem 0 0 0;
     }
 
     #vid {
@@ -934,16 +855,6 @@ p#footer {
     #vid-small {
       display: block;
       margin: 2rem 0;
-    }
-
-    #home h1 {
-      font-size: 42px;
-      font-weight: 500;
-    }
-
-    .hero-text {
-      font-size: 72px;
-      margin: 1.5rem 1rem 1rem 0;
     }
 
     p {
@@ -1010,15 +921,15 @@ p#footer {
   }
 }
 
-/* for medium screens & tablets */
-@media (max-width: 1023px) {
+/* for medium screens & most tablets */
+@media (max-width: 1023px) and (min-width: 768px) {
   .rotating-container {
     width: 768px;
     margin-left: -384px;
   }
 
-  .inner-content {
-    width: 768px;
+  .hamburger {
+    font-size: 36px;
   }
 
   .stripe {
@@ -1026,22 +937,25 @@ p#footer {
     width: 200px;
   }
 
-  h1 {
-    font-size: 42px;
+  .stripe h1 {
+    font-size: 43px;
   }
 
-  .frontend {
-    left: 325px;
+  h1.frontend {
+    left: 330px;
   }
 
-  .hero-text {
+  .inner-content {
+    width: 768px;
+  }
+
+  .home h1 {
     font-size: 60px;
   }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.9;
-    margin: 0;
   }
 
   nav ul {
@@ -1049,18 +963,34 @@ p#footer {
   }
 
   nav ul li {
-    font-size: 36px;
-    margin: 1.5rem 0;
+    font-size: 40px;
+    margin: 1.5rem 0 0 0;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+
+  #skills main {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .progress-bars h3 {
+    font-size: 1rem;
+  }
+
+  .progress {
+    height: 12px;
+  }
+
+  .panel h3 {
+    font-size: 20px;
   }
 
   .extra {
     display: none;
-  }
-
-  #projects h3 {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 1rem;
   }
 
   .grid-wrapper {
@@ -1123,14 +1053,6 @@ p#footer {
     grid-row: 9 / 11;
   }
 
-  .mockup {
-    left: 0;
-  }
-
-  .slide-right {
-    left: 106%;
-  }
-
   #wireframe2 {
     grid-row: 11;
   }
@@ -1158,14 +1080,10 @@ p#footer {
     grid-row: 16;
   }
 
-  #contact {
-    justify-content: flex-start;
-  }
-
   .photo-marcia {
     width: 250px;
     height: 180px;
-    top: -75%;
+    top: -60%;
   }
 
   #contact {
@@ -1178,38 +1096,36 @@ p#footer {
   }
 
   form {
-    grid-template-rows: 50px 40px 130px 50px;
-    gap: 15px;
-    padding: 20px;
-    margin: 3rem 0;
+    margin: 6rem 0 3rem 0;
   }
 
   #submit {
     font-size: 20px;
   }
 
-  #footer {
-    font-size: 16px;
-    margin-top: 7rem;
-  }
-
   /* nested media query: medium + short */
   @media (max-height: 950px) {
     .hamburger {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
     #vid {
       display: none;
     }
 
+    #vid-small {
+      display: block;
+      margin: 1rem 0 2rem 0;
+    }
+
+    #home-bottom {
+      margin-bottom: 0;
+    }
+
     nav ul li {
       margin: 1.5rem 0 0 0;
       font-size: 36px;
-    }
-
-    .progress-bars {
-      top: 0;
+      text-align: right;
     }
   }
 }
@@ -1243,13 +1159,13 @@ p#footer {
     display: none;
   }
 
-  .frontend {
+  h1.frontend {
     left: 138px;
   }
 
   .inner-content {
     width: 374px;
-    padding: 5rem 2rem 1rem 2rem;
+    padding: 0 2rem 1rem 2rem;
   }
 
   #home {
@@ -1259,19 +1175,25 @@ p#footer {
   .home {
     display: block;
     position: relative;
+    padding: 6rem 0 3rem 0;
   }
 
   #home h1 {
-    margin-top: 3rem;
+    margin-top: 2rem;
     font-size: 56px;
+    font-weight: 500;
   }
 
   .fa-circle-xmark {
     font-size: 2.5rem;
   }
 
-  h2.hero-text {
+  h2 {
     font-size: 56px;
+  }
+
+  header {
+    margin-bottom: 2rem;
   }
 
   p {
@@ -1286,21 +1208,22 @@ p#footer {
     display: inline;
   }
 
-  #vid {
+  #vid,
+  #vid-right {
     display: none;
   }
 
   #vid-small {
     width: 180px;
     height: 250px;
-    margin: 3rem 0;
+    margin: 2rem 0;
     display: block;
   }
 
   nav {
     position: absolute;
     right: 0;
-    bottom: 14rem;
+    bottom: 16rem;
   }
 
   nav ul {
@@ -1324,12 +1247,20 @@ p#footer {
   #skills,
   #projects,
   #contact {
-    padding-top: 0.5rem;
+    padding-top: 2rem;
   }
 
   #skills main {
     display: block;
     margin-bottom: 2rem;
+  }
+
+  .panel h3 {
+    font-size: 18px;
+  }
+
+  .panel {
+    height: 200px;
   }
 
   .education {
@@ -1363,7 +1294,7 @@ p#footer {
     display: inline;
   }
 
-  #projects h2.hero-text {
+  #projects h2 {
     margin-bottom: 1rem;
   }
 
@@ -1371,14 +1302,24 @@ p#footer {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 1rem;
+    line-height: 1.5;
   }
 
   .grid-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 20px;
     column-gap: 20px;
     grid-template-rows:
-      250px auto auto 200px 270px 200px 210px auto 200px 100px
+      225px auto auto 200px 270px 200px 210px auto 200px 100px
       200px 50px 100px auto 200px 200px 200px 200px;
+  }
+
+  #challenge2,
+  #challenge3,
+  #challenge6,
+  #challenge7,
+  #challenge9 {
+    display: none;
   }
 
   #my-website-img {
@@ -1386,18 +1327,19 @@ p#footer {
     grid-row: 1;
   }
 
+  .my-website-description {
+    grid-column: 1 / 5;
+    grid-row: 2;
+  }
+
+  .code-challenges-description {
+    grid-column: 1 / 5;
+    grid-row: 3;
+  }
+
   #challenge1 {
     grid-row: 4;
     grid-column: 1 / 5;
-  }
-
-  #challenge2,
-  #challenge3,
-  #challenge6,
-  #challenge6,
-  #challenge7,
-  #challenge9 {
-    display: none;
   }
 
   #challenge4 {
@@ -1431,14 +1373,6 @@ p#footer {
 
   #hifi-mockup1 {
     grid-row: 9 / 11;
-  }
-
-  .mockup {
-    left: 0;
-  }
-
-  .slide-right {
-    left: 106%;
   }
 
   #wireframe2 {
@@ -1481,13 +1415,8 @@ p#footer {
   }
 
   #contact {
-    justify-content: flex-start;
     padding-bottom: 0;
     height: auto;
-  }
-
-  #contact .fa-chevron-up {
-    font-size: 2rem;
   }
 
   #contact h3 {
