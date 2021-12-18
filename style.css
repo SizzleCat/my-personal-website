@@ -128,7 +128,6 @@ h1.frontend {
   background: linear-gradient(to right, #84f4ff, #9effaa);
   margin: 0 auto;
   padding: 0 4rem;
-  border-radius: 0 0 10px 10px;
 }
 
 section {
@@ -1516,9 +1515,13 @@ footer p {
     margin-left: -333px;
   }
 
+  .hamburger {
+    font-size: 2rem;
+  }
+
   .stripe {
-    width: 165px;
-    margin-left: 0;
+    width: 130px;
+    margin-left: 50px;
   }
 
   #logo {
@@ -1527,11 +1530,11 @@ footer p {
   }
 
   .stripe h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   h1.frontend {
-    left: 275px;
+    left: 215px;
   }
 
   .inner-content {
@@ -1580,13 +1583,13 @@ footer p {
   p.mobile-text {
     display: inline;
     margin-right: 1rem;
-    width: 73%;
+    width: 72%;
   }
 
   #vid-right {
     display: block;
     height: 200px;
-    width: 150px;
+    width: 130px;
     margin-top: 1rem;
     order: 2;
   }
@@ -1765,5 +1768,20 @@ footer p {
 
   ::placeholder {
     font-size: 14px;
+  }
+
+  @media (min-width: 811px) {
+    .rotating-container {
+      width: 812px;
+      margin-left: -406px;
+    }
+
+    .inner-content {
+      width: 812px;
+    }
+
+    p.mobile-text {
+      width: 77%;
+    }
   }
 }
