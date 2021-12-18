@@ -1509,7 +1509,7 @@ footer p {
 }
 
 /* mobile: landscape orientation */
-@media (max-height: 500px) {
+@media (max-height: 500px) and (max-width: 896px) {
   .rotating-container {
     width: 666px;
     margin-left: -333px;
@@ -1615,7 +1615,7 @@ footer p {
   }
 
   nav ul li {
-    margin: 1rem 0;
+    margin: 1rem 0.5rem 0 0;
     font-size: 30px;
     text-align: right;
   }
@@ -1770,7 +1770,7 @@ footer p {
     font-size: 14px;
   }
 
-  @media (min-width: 811px) {
+  @media (min-width: 740px) {
     .rotating-container {
       width: 812px;
       margin-left: -406px;
