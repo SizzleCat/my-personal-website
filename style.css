@@ -126,7 +126,7 @@ h1.frontend {
 .inner-content {
   width: 1200px;
   background: linear-gradient(to right, #84f4ff, #9effaa);
-  margin: 0 auto 10rem auto;
+  margin: 0 auto 1rem auto;
   padding: 0 4rem;
   border-radius: 0 0 10px 10px;
 }
@@ -134,6 +134,7 @@ h1.frontend {
 section {
   padding-top: 4rem;
   margin-bottom: 5rem;
+  min-height: 100vh;
 }
 
 header {
@@ -158,7 +159,6 @@ header i:hover {
 /* Section: Home */
 .home {
   padding: 9rem 0 3rem 0;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -175,6 +175,7 @@ header i:hover {
 .fa-circle-xmark {
   margin: 0 0 4rem 0;
   cursor: pointer;
+  display: inline-block;
 }
 
 .fa-circle-xmark:hover {
@@ -255,9 +256,6 @@ a:hover {
 }
 
 /* Section: Skills */
-#skills {
-  height: auto;
-}
 
 #skills main {
   display: grid;
@@ -362,10 +360,6 @@ a:hover {
 }
 
 /* Section: Projects */
-#projects {
-  height: auto;
-  margin-bottom: 7rem;
-}
 
 #projects h3 {
   font-size: 32px;
@@ -585,8 +579,6 @@ p a:hover {
   flex-direction: column;
   padding-bottom: 1rem;
   justify-content: space-between;
-  height: 100vh;
-  margin: 0;
 }
 
 .my-phone,
@@ -715,311 +707,967 @@ footer p {
   font-size: 1rem;
 }
 
-/* nested media query: extra wide + short */
-@media (min-width: 1200px) {
-  @media (max-height: 950px) {
-    #vid-right {
-      display: block;
-      margin-right: 3rem;
-      height: 250px;
-      width: 200px;
+@media (min-height: 501px) {
+  /* nested media query: extra wide + short */
+  @media (min-width: 1200px) {
+    @media (max-height: 950px) {
+      #vid-right {
+        display: block;
+        margin-right: 3rem;
+        height: 250px;
+        width: 200px;
+      }
+
+      #vid,
+      #vid-small {
+        display: none;
+      }
+
+      nav ul li {
+        margin: 2rem 0 0 0;
+      }
+
+      #skills main {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .progress-bars {
+        position: absolute;
+        top: -20%;
+        right: 0;
+        width: 47%;
+      }
+
+      .progress-bars h3 {
+        font-size: 16px;
+      }
+
+      #contact {
+        /* height: auto;
+        margin-top: 0; */
+      }
+
+      form {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 45px 45px 100px 45px;
+        width: 100%;
+      }
+
+      .photo-marcia {
+        height: 100%;
+        position: static;
+        grid-row: 1 / 5;
+        grid-column: 1 / 2;
+      }
+
+      #contact h4 {
+        font-size: 24px;
+        grid-column: 2 / 4;
+      }
+
+      #name {
+        grid-row: 2;
+        grid-column: 2 / 3;
+      }
+
+      #email {
+        grid-row: 2;
+        grid-column: 3 / 4;
+      }
+
+      #message {
+        grid-row: 3;
+        grid-column: 2 / 4;
+      }
+
+      #submit {
+        grid-row: 4;
+      }
+
+      #contact h3,
+      input#submit {
+        font-size: 20px;
+        padding-top: 5px;
+      }
+
+      ::placeholder {
+        font-size: 14px;
+        color: #3a3734;
+        font-weight: 400;
+      }
+    }
+  }
+
+  /* for somewhat wide screens, including large tablets */
+  @media (max-width: 1199px) and (min-width: 1024px) {
+    .rotating-container {
+      width: 1024px;
+      margin-left: -512px;
     }
 
-    #vid,
-    #vid-small {
-      display: none;
+    .inner-content {
+      width: 1024px;
     }
 
-    nav ul li {
-      margin: 2rem 0 0 0;
+    .stripe {
+      margin-left: 50px;
+    }
+
+    .home h1 {
+      font-size: 60px;
+      font-weight: 500;
+      margin: 3rem 0 2rem 0;
+    }
+
+    nav ul {
+      text-align: right;
     }
 
     #skills main {
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-bottom: 3rem;
-      position: relative;
-    }
-
-    .progress-bars {
-      position: absolute;
-      top: -20%;
-      right: 0;
-      width: 47%;
+      gap: 3rem;
     }
 
     .progress-bars h3 {
       font-size: 16px;
     }
 
-    #contact {
-      height: auto;
-      margin-top: 0;
+    .panel h3 {
+      font-size: 20px;
     }
 
-    form {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 45px 45px 100px 45px;
-      width: 100%;
+    .grid-wrapper {
+      grid-template-rows:
+        320px auto 270px 370px 280px 310px auto 700px 300px
+        700px 100px 300px auto 280px 380px;
     }
 
-    .photo-marcia {
-      height: 100%;
-      position: static;
-      grid-row: 1 / 5;
-      grid-column: 1 / 2;
+    /* nested media query: wide + short */
+    @media (max-height: 950px) {
+      .home h1 {
+        margin: 1rem 0 0 0;
+      }
+
+      #vid {
+        display: none;
+      }
+
+      #vid-small {
+        display: block;
+        margin: 2rem 0;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      #skills main {
+        position: relative;
+      }
+
+      .progress {
+        height: 15px;
+      }
+
+      .progress-bars {
+        position: absolute;
+        top: -35%;
+        right: 0;
+        width: 45%;
+      }
+
+      .progress-bars h3 {
+        font-size: 16px;
+      }
+
+      #projects h2 {
+        margin-bottom: 3rem;
+      }
+
+      .photo-marcia {
+        width: 300px;
+        height: 200px;
+        top: -75%;
+      }
+
+      #contact {
+        height: auto;
+      }
+
+      #contact i {
+        font-size: 3rem;
+      }
+
+      form {
+        grid-template-rows: 40px 40px 80px 45px;
+        gap: 1rem;
+      }
+
+      #contact h4 {
+        font-size: 24px;
+      }
+
+      #contact h3,
+      input#submit {
+        font-size: 20px;
+        padding-top: 5px;
+      }
+
+      ::placeholder {
+        font-size: 14px;
+        color: #3a3734;
+        font-weight: 400;
+      }
+    }
+  }
+
+  /* for medium screens & most tablets */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .rotating-container {
+      width: 768px;
+      margin-left: -384px;
     }
 
-    #contact h4 {
-      font-size: 24px;
-      grid-column: 2 / 4;
+    .hamburger {
+      font-size: 36px;
     }
 
-    #name {
+    .stripe {
+      margin-left: 0;
+      width: 200px;
+    }
+
+    .stripe h1 {
+      font-size: 43px;
+    }
+
+    h1.frontend {
+      left: 330px;
+    }
+
+    .inner-content {
+      width: 768px;
+    }
+
+    .home h1 {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    nav ul {
+      text-align: left;
+    }
+
+    nav ul li {
+      font-size: 40px;
+      margin: 1.5rem 0 0 0;
+    }
+
+    h2 {
+      font-size: 60px;
+    }
+
+    #skills main {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .progress-bars h3 {
+      font-size: 1rem;
+    }
+
+    .progress {
+      height: 12px;
+    }
+
+    .panel h3 {
+      font-size: 20px;
+    }
+
+    .extra {
+      display: none;
+    }
+
+    .grid-wrapper {
+      row-gap: 20px;
+      column-gap: 20px;
+      grid-template-rows:
+        375px auto auto 200px 270px 200px 210px auto 500px 300px
+        500px 70px 200px auto 200px 280px;
+    }
+
+    .my-website-description {
+      grid-column: 1 / 5;
       grid-row: 2;
-      grid-column: 2 / 3;
     }
 
-    #email {
-      grid-row: 2;
-      grid-column: 3 / 4;
+    #my-website-img {
+      grid-column: 1 / 4;
+      grid-row: 1;
+      margin: 1rem 0;
     }
 
-    #message {
+    .code-challenges-description {
       grid-row: 3;
-      grid-column: 2 / 4;
     }
 
-    #submit {
+    #challenge1,
+    #challenge2 {
       grid-row: 4;
     }
 
-    #contact h3,
-    input#submit {
+    #challenge3,
+    #challenge4 {
+      grid-row: 5;
+    }
+
+    #challenge5,
+    #challenge6 {
+      grid-row: 5;
+    }
+
+    #challenge7,
+    #challenge8 {
+      grid-row: 6;
+    }
+
+    #challenge9,
+    #challenge10 {
+      grid-row: 7;
+    }
+
+    .website-design-description {
+      grid-row: 8;
+    }
+
+    #wireframe1 {
+      grid-row: 9;
+    }
+
+    #hifi-mockup1 {
+      grid-row: 9 / 11;
+    }
+
+    #wireframe2 {
+      grid-row: 11;
+    }
+
+    #hifi-mockup2 {
+      grid-row: 11 / 13;
+    }
+
+    #wireframe3,
+    #hifi-mockup3 {
+      grid-row: 13;
+    }
+
+    .digital-designs-description {
+      grid-row: 14;
+    }
+
+    #gd1,
+    #gd2 {
+      grid-row: 15;
+    }
+
+    #gd3,
+    #gd4 {
+      grid-row: 16;
+    }
+
+    .photo-marcia {
+      width: 250px;
+      height: 180px;
+      top: -60%;
+    }
+
+    #contact {
+      height: auto;
+    }
+
+    #contact h3 {
       font-size: 20px;
-      padding-top: 5px;
+      margin: 1rem 0;
     }
 
-    ::placeholder {
-      font-size: 14px;
-      color: #3a3734;
-      font-weight: 400;
-    }
-  }
-}
-
-/* for wide screens, including large tablets */
-@media (max-width: 1199px) and (min-width: 1024px) {
-  .rotating-container {
-    width: 1024px;
-    margin-left: -512px;
-  }
-
-  .inner-content {
-    width: 1024px;
-  }
-
-  .stripe {
-    margin-left: 50px;
-  }
-
-  .home h1 {
-    font-size: 60px;
-    font-weight: 500;
-    margin: 3rem 0 2rem 0;
-  }
-
-  nav ul {
-    text-align: right;
-  }
-
-  #skills main {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
-
-  .progress-bars h3 {
-    font-size: 16px;
-  }
-
-  .panel h3 {
-    font-size: 20px;
-  }
-
-  .grid-wrapper {
-    grid-template-rows:
-      320px auto 270px 370px 280px 310px auto 700px 300px
-      700px 100px 300px auto 280px 380px;
-  }
-
-  /* nested media query: wide + short */
-  @media (max-height: 950px) {
-    .home h1 {
-      margin: 1rem 0 0 0;
+    form {
+      margin: 6rem 0 3rem 0;
     }
 
-    #vid {
+    #submit {
+      font-size: 20px;
+    }
+
+    /* nested media query: medium + short */
+    @media (max-height: 950px) {
+      .hamburger {
+        font-size: 2rem;
+      }
+
+      #vid {
+        display: none;
+      }
+
+      #vid-small {
+        display: block;
+        margin: 1rem 0 2rem 0;
+      }
+
+      #home-bottom {
+        margin-bottom: 0;
+      }
+
+      nav ul li {
+        margin: 1.5rem 0 0 0;
+        font-size: 36px;
+        text-align: right;
+      }
+    }
+  }
+
+  /* mobile */
+  @media (max-width: 767px) {
+    .rotating-container {
+      width: 374px;
+      margin-left: -187px;
+    }
+
+    .hamburger {
+      font-size: 2rem;
+    }
+
+    .stripe {
+      margin-left: 0;
+      width: 120px;
+    }
+
+    #logo {
+      height: 200px;
+    }
+
+    .stripe h1 {
+      font-size: 26px;
+      margin: 5px 0;
+    }
+
+    .mobile-hide {
+      display: none;
+    }
+
+    h1.frontend {
+      left: 138px;
+    }
+
+    .inner-content {
+      width: 374px;
+      padding: 0 2rem 1rem 2rem;
+    }
+
+    #home {
+      height: auto;
+    }
+
+    .home {
+      display: block;
+      position: relative;
+      padding: 6rem 0 3rem 0;
+    }
+
+    #home h1 {
+      margin-top: 2rem;
+      font-size: 56px;
+      font-weight: 500;
+    }
+
+    .fa-circle-xmark {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 56px;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    p.default-text {
+      display: none;
+    }
+
+    p.mobile-text {
+      display: inline;
+    }
+
+    #vid,
+    #vid-right {
       display: none;
     }
 
     #vid-small {
-      display: block;
+      width: 180px;
+      height: 250px;
       margin: 2rem 0;
+      display: block;
     }
 
-    p {
-      font-size: 18px;
+    nav {
+      position: absolute;
+      right: 0;
+      bottom: 16rem;
+    }
+
+    nav ul {
+      text-align: left;
+    }
+
+    nav ul li {
+      font-size: 24px;
+      margin: 1.5rem 0;
+      font-weight: 500;
+    }
+
+    .extra {
+      display: none;
+    }
+
+    .fa-chevron-up {
+      font-size: 2rem;
+    }
+
+    #skills,
+    #projects,
+    #contact {
+      padding-top: 2rem;
     }
 
     #skills main {
-      position: relative;
+      display: block;
+      margin-bottom: 2rem;
     }
 
-    .progress {
-      height: 15px;
+    .panel h3 {
+      font-size: 18px;
     }
 
-    .progress-bars {
-      position: absolute;
-      top: -35%;
-      right: 0;
-      width: 45%;
+    .panel {
+      height: 200px;
+    }
+
+    .education {
+      margin-bottom: 2rem;
     }
 
     .progress-bars h3 {
-      font-size: 16px;
+      font-size: 14px;
     }
 
-    #projects h2 {
+    .progress {
+      height: 10px;
+      margin-bottom: 15px;
+    }
+
+    .progress-bars {
+      position: static;
+      width: 100%;
       margin-bottom: 3rem;
     }
 
-    .photo-marcia {
-      width: 300px;
-      height: 200px;
-      top: -75%;
+    .panel {
+      flex: 0.9;
+    }
+
+    .panel h3 {
+      text-align: center;
+    }
+
+    .mobile-show {
+      display: inline;
+    }
+
+    #projects h2 {
+      margin-bottom: 1rem;
+    }
+
+    #projects h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .grid-wrapper {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      row-gap: 20px;
+      column-gap: 20px;
+      grid-template-rows:
+        225px auto auto 200px 270px 200px 210px auto 200px 100px
+        200px 50px 100px auto 200px 200px 200px 200px;
+    }
+
+    #challenge2,
+    #challenge3,
+    #challenge6,
+    #challenge7,
+    #challenge9 {
+      display: none;
+    }
+
+    #my-website-img {
+      grid-column: 1 / 5;
+      grid-row: 1;
+    }
+
+    .my-website-description {
+      grid-column: 1 / 5;
+      grid-row: 2;
+    }
+
+    .code-challenges-description {
+      grid-column: 1 / 5;
+      grid-row: 3;
+    }
+
+    #challenge1 {
+      grid-row: 4;
+      grid-column: 1 / 5;
+    }
+
+    #challenge4 {
+      grid-row: 5;
+      grid-column: 1 / 3;
+      margin: 0;
+    }
+
+    #challenge5 {
+      grid-row: 5;
+      grid-column: 3 / 5;
+    }
+
+    #challenge8 {
+      grid-row: 6;
+      grid-column: 1 / 5;
+    }
+
+    #challenge10 {
+      grid-row: 7;
+      grid-column: 1 / 5;
+    }
+
+    .website-design-description {
+      grid-row: 8;
+    }
+
+    #wireframe1 {
+      grid-row: 9;
+    }
+
+    #hifi-mockup1 {
+      grid-row: 9 / 11;
+    }
+
+    #wireframe2 {
+      grid-row: 11;
+    }
+
+    #hifi-mockup2 {
+      grid-row: 11 / 13;
+    }
+
+    #wireframe3,
+    #hifi-mockup3 {
+      grid-row: 13;
+    }
+
+    .digital-designs-description {
+      grid-row: 14;
+    }
+
+    #gd1 {
+      grid-row: 15;
+      grid-column: 1 / 5;
+    }
+
+    #gd2 {
+      grid-row: 16;
+      grid-column: 1 / 5;
+      background-size: 130%;
+      background-position: left top;
+    }
+
+    #gd3 {
+      grid-row: 17;
+      grid-column: 1 / 5;
+    }
+
+    #gd4 {
+      grid-row: 18;
+      grid-column: 1 / 5;
     }
 
     #contact {
+      padding-bottom: 0;
       height: auto;
     }
 
-    #contact i {
+    #contact h3 {
+      font-size: 18px;
+      margin: 0.75rem 0;
+    }
+
+    .contact-info {
+      margin: 0;
+    }
+
+    .contact-info i {
       font-size: 3rem;
     }
 
     form {
-      grid-template-rows: 40px 40px 80px 45px;
-      gap: 1rem;
+      grid-template-rows: 200px 80px 35px 35px 100px 40px;
+      gap: 2 rem;
+      padding: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .photo-marcia {
+      position: static;
+      width: 100%;
+      height: 200px;
+      grid-row: 1;
+      grid-column: 1 / 5;
+      background-size: cover;
+    }
+
+    form h4 {
+      grid-column: 1 / 5;
+      grid-row: 2;
     }
 
     #contact h4 {
-      font-size: 24px;
+      font-size: 20px;
+      margin: 1rem 0.5rem;
     }
 
-    #contact h3,
-    input#submit {
-      font-size: 20px;
-      padding-top: 5px;
+    #name {
+      grid-column: 1 / 5;
+      grid-row: 3;
+    }
+
+    #email {
+      grid-column: 1 / 5;
+      grid-row: 4;
+    }
+
+    #message {
+      grid-column: 1 / 5;
+      grid-row: 5;
+    }
+
+    #submit {
+      grid-column: 1 / 5;
+      grid-row: 6;
+      font-size: 16px;
+      padding: 0;
+    }
+
+    input {
+      padding: 1rem 0.5rem;
+    }
+
+    textarea {
+      padding-top: 1rem;
+      resize: none;
     }
 
     ::placeholder {
-      font-size: 14px;
-      color: #3a3734;
-      font-weight: 400;
+      font-size: 12px;
+    }
+
+    .social-media i {
+      font-size: 3rem;
+      margin: 0 8px;
+    }
+
+    #footer {
+      font-size: 12px;
+      margin-top: 0;
     }
   }
 }
 
-/* for medium screens & most tablets */
-@media (max-width: 1023px) and (min-width: 768px) {
+/* mobile: landscape orientation */
+@media (max-height: 500px) {
   .rotating-container {
-    width: 768px;
-    margin-left: -384px;
-  }
-
-  .hamburger {
-    font-size: 36px;
+    width: 666px;
+    margin-left: -333px;
   }
 
   .stripe {
+    width: 165px;
     margin-left: 0;
-    width: 200px;
+  }
+
+  #logo {
+    height: 150px;
+    margin: 0 1.2rem 0 0;
   }
 
   .stripe h1 {
-    font-size: 43px;
+    font-size: 36px;
   }
 
   h1.frontend {
-    left: 330px;
+    left: 275px;
   }
 
   .inner-content {
-    width: 768px;
+    width: 666px;
+    padding: 0 2rem;
+  }
+
+  section {
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+    min-height: 100vh;
+  }
+
+  .home {
+    padding: 5rem 0 0 0;
+  }
+
+  .fa-circle-xmark {
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+    width: 32px;
+  }
+
+  #home-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0;
   }
 
   .home h1 {
-    font-size: 60px;
+    font-size: 50px;
+    margin: 1rem 0 3rem 0;
+    font-weight: 500;
   }
 
   p {
     font-size: 16px;
-    line-height: 1.9;
+  }
+
+  p.default-text {
+    display: none;
+  }
+
+  p.mobile-text {
+    display: inline;
+    margin-right: 1rem;
+    width: 73%;
+  }
+
+  #vid-right {
+    display: block;
+    height: 200px;
+    width: 150px;
+    margin-top: 1rem;
+    order: 2;
+  }
+
+  #vid,
+  #vid-small {
+    display: none;
+  }
+
+  #home-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    position: absolute;
+    right: 3rem;
+    top: 1rem;
   }
 
   nav ul {
-    text-align: left;
+    order: 1;
   }
 
   nav ul li {
-    font-size: 40px;
-    margin: 1.5rem 0 0 0;
+    margin: 1rem 0;
+    font-size: 30px;
+    text-align: right;
   }
 
   h2 {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   #skills main {
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    margin-bottom: 3rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
   }
 
   .progress-bars h3 {
-    font-size: 1rem;
+    font-size: 14px;
   }
 
   .progress {
     height: 12px;
   }
 
+  .panel {
+    height: 180px;
+  }
+
   .panel h3 {
     font-size: 20px;
   }
 
-  .extra {
+  .extra,
+  h3.mobile-hide {
     display: none;
   }
 
+  #projects h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
   .grid-wrapper {
-    row-gap: 20px;
-    column-gap: 20px;
     grid-template-rows:
-      375px auto auto 200px 270px 200px 210px auto 500px 300px
-      500px 70px 200px auto 200px 280px;
+      210px auto auto 180px 240px 180px 180px auto 400px 300px
+      370px 100px 200px auto 190px 220px;
+    gap: 1rem;
   }
 
   .my-website-description {
-    grid-column: 1 / 5;
-    grid-row: 2;
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
   }
 
   #my-website-img {
-    grid-column: 1 / 4;
+    grid-column: 1 / 3;
     grid-row: 1;
-    margin: 1rem 0;
   }
 
   .code-challenges-description {
@@ -1091,342 +1739,10 @@ footer p {
   }
 
   .photo-marcia {
-    width: 250px;
+    width: 260px;
     height: 180px;
-    top: -60%;
-  }
-
-  #contact {
-    height: auto;
-  }
-
-  #contact h3 {
-    font-size: 20px;
-    margin: 1rem 0;
-  }
-
-  form {
-    margin: 6rem 0 3rem 0;
-  }
-
-  #submit {
-    font-size: 20px;
-  }
-
-  /* nested media query: medium + short */
-  @media (max-height: 950px) {
-    .hamburger {
-      font-size: 2rem;
-    }
-
-    #vid {
-      display: none;
-    }
-
-    #vid-small {
-      display: block;
-      margin: 1rem 0 2rem 0;
-    }
-
-    #home-bottom {
-      margin-bottom: 0;
-    }
-
-    nav ul li {
-      margin: 1.5rem 0 0 0;
-      font-size: 36px;
-      text-align: right;
-    }
-  }
-}
-
-/* mobile */
-@media (max-width: 767px) {
-  .rotating-container {
-    width: 374px;
-    margin-left: -187px;
-  }
-
-  .hamburger {
-    font-size: 2rem;
-  }
-
-  .stripe {
-    margin-left: 0;
-    width: 120px;
-  }
-
-  #logo {
-    height: 200px;
-  }
-
-  .stripe h1 {
-    font-size: 26px;
-    margin: 5px 0;
-  }
-
-  .mobile-hide {
-    display: none;
-  }
-
-  h1.frontend {
-    left: 138px;
-  }
-
-  .inner-content {
-    width: 374px;
-    padding: 0 2rem 1rem 2rem;
-  }
-
-  #home {
-    height: auto;
-  }
-
-  .home {
-    display: block;
-    position: relative;
-    padding: 6rem 0 3rem 0;
-  }
-
-  #home h1 {
-    margin-top: 2rem;
-    font-size: 56px;
-    font-weight: 500;
-  }
-
-  .fa-circle-xmark {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 56px;
-  }
-
-  header {
-    margin-bottom: 2rem;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  p.default-text {
-    display: none;
-  }
-
-  p.mobile-text {
-    display: inline;
-  }
-
-  #vid,
-  #vid-right {
-    display: none;
-  }
-
-  #vid-small {
-    width: 180px;
-    height: 250px;
-    margin: 2rem 0;
-    display: block;
-  }
-
-  nav {
-    position: absolute;
     right: 0;
-    bottom: 16rem;
-  }
-
-  nav ul {
-    text-align: left;
-  }
-
-  nav ul li {
-    font-size: 24px;
-    margin: 1.5rem 0;
-    font-weight: 500;
-  }
-
-  .extra {
-    display: none;
-  }
-
-  .fa-chevron-up {
-    font-size: 2rem;
-  }
-
-  #skills,
-  #projects,
-  #contact {
-    padding-top: 2rem;
-  }
-
-  #skills main {
-    display: block;
-    margin-bottom: 2rem;
-  }
-
-  .panel h3 {
-    font-size: 18px;
-  }
-
-  .panel {
-    height: 200px;
-  }
-
-  .education {
-    margin-bottom: 2rem;
-  }
-
-  .progress-bars h3 {
-    font-size: 14px;
-  }
-
-  .progress {
-    height: 10px;
-    margin-bottom: 15px;
-  }
-
-  .progress-bars {
-    position: static;
-    width: 100%;
-    margin-bottom: 3rem;
-  }
-
-  .panel {
-    flex: 0.9;
-  }
-
-  .panel h3 {
-    text-align: center;
-  }
-
-  .mobile-show {
-    display: inline;
-  }
-
-  #projects h2 {
-    margin-bottom: 1rem;
-  }
-
-  #projects h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-  }
-
-  .grid-wrapper {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 20px;
-    column-gap: 20px;
-    grid-template-rows:
-      225px auto auto 200px 270px 200px 210px auto 200px 100px
-      200px 50px 100px auto 200px 200px 200px 200px;
-  }
-
-  #challenge2,
-  #challenge3,
-  #challenge6,
-  #challenge7,
-  #challenge9 {
-    display: none;
-  }
-
-  #my-website-img {
-    grid-column: 1 / 5;
-    grid-row: 1;
-  }
-
-  .my-website-description {
-    grid-column: 1 / 5;
-    grid-row: 2;
-  }
-
-  .code-challenges-description {
-    grid-column: 1 / 5;
-    grid-row: 3;
-  }
-
-  #challenge1 {
-    grid-row: 4;
-    grid-column: 1 / 5;
-  }
-
-  #challenge4 {
-    grid-row: 5;
-    grid-column: 1 / 3;
-    margin: 0;
-  }
-
-  #challenge5 {
-    grid-row: 5;
-    grid-column: 3 / 5;
-  }
-
-  #challenge8 {
-    grid-row: 6;
-    grid-column: 1 / 5;
-  }
-
-  #challenge10 {
-    grid-row: 7;
-    grid-column: 1 / 5;
-  }
-
-  .website-design-description {
-    grid-row: 8;
-  }
-
-  #wireframe1 {
-    grid-row: 9;
-  }
-
-  #hifi-mockup1 {
-    grid-row: 9 / 11;
-  }
-
-  #wireframe2 {
-    grid-row: 11;
-  }
-
-  #hifi-mockup2 {
-    grid-row: 11 / 13;
-  }
-
-  #wireframe3,
-  #hifi-mockup3 {
-    grid-row: 13;
-  }
-
-  .digital-designs-description {
-    grid-row: 14;
-  }
-
-  #gd1 {
-    grid-row: 15;
-    grid-column: 1 / 5;
-  }
-
-  #gd2 {
-    grid-row: 16;
-    grid-column: 1 / 5;
-    background-size: 130%;
-    background-position: left top;
-  }
-
-  #gd3 {
-    grid-row: 17;
-    grid-column: 1 / 5;
-  }
-
-  #gd4 {
-    grid-row: 18;
-    grid-column: 1 / 5;
-  }
-
-  #contact {
-    padding-bottom: 0;
-    height: auto;
+    top: -70%;
   }
 
   #contact h3 {
@@ -1434,82 +1750,20 @@ footer p {
     margin: 0.75rem 0;
   }
 
-  .contact-info {
-    margin: 0;
-  }
-
-  .contact-info i {
-    font-size: 3rem;
+  #contact h4 {
+    font-size: 22px;
   }
 
   form {
-    grid-template-rows: 200px 80px 35px 35px 100px 40px;
-    gap: 2 rem;
-    padding: 1rem;
-    margin: 1.5rem 0;
-  }
-
-  .photo-marcia {
-    position: static;
-    width: 100%;
-    height: 200px;
-    grid-row: 1;
-    grid-column: 1 / 5;
-    background-size: cover;
-  }
-
-  form h4 {
-    grid-column: 1 / 5;
-    grid-row: 2;
-  }
-
-  #contact h4 {
-    font-size: 20px;
-    margin: 1rem 0.5rem;
-  }
-
-  #name {
-    grid-column: 1 / 5;
-    grid-row: 3;
-  }
-
-  #email {
-    grid-column: 1 / 5;
-    grid-row: 4;
-  }
-
-  #message {
-    grid-column: 1 / 5;
-    grid-row: 5;
+    grid-template-rows: 50px 40px 100px 40px;
+    gap: 10px;
   }
 
   #submit {
-    grid-column: 1 / 5;
-    grid-row: 6;
-    font-size: 16px;
-    padding: 0;
-  }
-
-  input {
-    padding: 1rem 0.5rem;
-  }
-
-  textarea {
-    padding-top: 1rem;
-    resize: none;
+    font-size: 22px;
   }
 
   ::placeholder {
-    font-size: 12px;
-  }
-
-  .social-media i {
-    font-size: 3rem;
-    margin: 0 8px;
-  }
-
-  #footer {
-    font-size: 12px;
-    margin-top: 0;
+    font-size: 14px;
   }
 }
