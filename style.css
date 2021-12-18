@@ -126,7 +126,7 @@ h1.frontend {
 .inner-content {
   width: 1200px;
   background: linear-gradient(to right, #84f4ff, #9effaa);
-  margin: 0 auto 1rem auto;
+  margin: 0 auto;
   padding: 0 4rem;
   border-radius: 0 0 10px 10px;
 }
