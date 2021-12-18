@@ -1639,11 +1639,10 @@ footer p {
   }
 
   .panel h3 {
-    font-size: 20px;
+    font-size: 19px;
   }
 
-  .extra,
-  h3.mobile-hide {
+  span.extra {
     display: none;
   }
 
