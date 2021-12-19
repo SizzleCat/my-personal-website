@@ -489,14 +489,14 @@ p a:hover {
 #wireframe1 {
   grid-column: 1 / 3;
   grid-row: 8;
-  background-image: url(images/maynooth-wireframes/Homepage.png);
+  background-image: url(images/maynooth-wireframes/Homepage.jpg);
   z-index: 10;
 }
 
 #hifi-mockup1 {
   grid-column: 1 / 3;
   grid-row: 8 / 10;
-  background-image: url(images/maynooth-hifi-mockups/Homepage.png);
+  background-image: url(images/maynooth-hifi-mockups/Homepage.jpg);
   transition: 2s ease;
   position: relative;
 }
@@ -512,14 +512,14 @@ p a:hover {
 #wireframe2 {
   grid-column: 1 / 3;
   grid-row: 10;
-  background-image: url(images/maynooth-wireframes/Category-Page.png);
+  background-image: url(images/maynooth-wireframes/Category-Page.jpg);
   z-index: 10;
 }
 
 #hifi-mockup2 {
   grid-column: 1 / 3;
   grid-row: 10 / 12;
-  background-image: url(images/maynooth-hifi-mockups/Category-page.png);
+  background-image: url(images/maynooth-hifi-mockups/Category-page.jpg);
   transition: 2s ease;
   position: relative;
 }
@@ -527,14 +527,14 @@ p a:hover {
 #wireframe3 {
   grid-column: 1 / 3;
   grid-row: 12;
-  background-image: url(images/maynooth-wireframes/Product-page.png);
+  background-image: url(images/maynooth-wireframes/Product-page.jpg);
   z-index: 10;
 }
 
 #hifi-mockup3 {
   grid-column: 1 / 3;
   grid-row: 12;
-  background-image: url(images/maynooth-hifi-mockups/Product-page.png);
+  background-image: url(images/maynooth-hifi-mockups/Product-page.jpg);
   transition: 2s ease;
   position: relative;
 }
@@ -548,28 +548,28 @@ p a:hover {
 #gd1 {
   grid-column: 1 / 3;
   grid-row: 14;
-  background: #000 url(images/graphic-design/gd4.PNG) no-repeat;
+  background: #000 url(images/graphic-design/gd4.jpg) no-repeat;
   background-size: cover;
 }
 
 #gd2 {
   grid-column: 3 / 5;
   grid-row: 14;
-  background-image: url(images/graphic-design/gd2.PNG);
+  background-image: url(images/graphic-design/gd2.jpg);
   background-position: center top;
 }
 
 #gd3 {
   grid-column: 1 / 3;
   grid-row: 15;
-  background-image: url(images/graphic-design/gd3.PNG);
+  background-image: url(images/graphic-design/gd3.jpg);
   background-position: center top;
 }
 
 #gd4 {
   grid-column: 3 / 5;
   grid-row: 15;
-  background-image: url(images/graphic-design/gd1.PNG);
+  background-image: url(images/graphic-design/gd1.jpg);
 }
 
 /* Section: Contact  */
@@ -625,7 +625,7 @@ form {
   width: 400px;
   height: 270px;
   border-radius: 10px;
-  background-image: url("images/me_and_marcia.png");
+  background-image: url("images/me_and_marcia.jpg");
   background-size: cover;
   position: absolute;
   right: 0;
