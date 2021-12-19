@@ -1784,6 +1784,13 @@ footer p {
       p.mobile-text {
         width: 77%;
       }
+
+      .grid-wrapper {
+        grid-template-rows:
+          260px auto auto 220px 320px 220px 220px auto 470px 300px
+          460px 100px 240px auto 240px 260px;
+        gap: 1rem;
+      }
     }
 
     @media (min-width: 813px) {
@@ -1798,6 +1805,13 @@ footer p {
 
       p.mobile-text {
         width: 77%;
+      }
+
+      .grid-wrapper {
+        grid-template-rows:
+          270px auto auto 230px 340px 220px 230px auto 500px 300px
+          500px 100px 240px auto 250px 270px;
+        gap: 1rem;
       }
     }
 
@@ -1814,20 +1828,12 @@ footer p {
       p.mobile-text {
         width: 78%;
       }
-    }
 
-    @media (min-width: 2340px) {
-      .rotating-container {
-        width: 2340px;
-        margin-left: -1170px;
-      }
-
-      .inner-content {
-        width: 2340px;
-      }
-
-      p.mobile-text {
-        width: 78%;
+      .grid-wrapper {
+        grid-template-rows:
+          290px auto auto 230px 370px 240px 260px auto 520px 320px
+          520px 100px 260px auto 270px 300px;
+        gap: 1rem;
       }
     }
   }
