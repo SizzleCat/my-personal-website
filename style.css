@@ -1509,7 +1509,7 @@ footer p {
 }
 
 /* mobile: landscape orientation */
-@media (max-height: 500px) and (max-width: 896px) {
+@media (max-height: 500px) {
   .rotating-container {
     width: 666px;
     margin-left: -333px;
@@ -1770,7 +1770,7 @@ footer p {
     font-size: 14px;
   }
 
-  @media (min-width: 740px) {
+  @media (min-width: 668px) {
     .rotating-container {
       width: 812px;
       margin-left: -406px;
@@ -1782,6 +1782,36 @@ footer p {
 
     p.mobile-text {
       width: 77%;
+    }
+  }
+
+  @media (min-width: 813px) {
+    .rotating-container {
+      width: 844px;
+      margin-left: -422px;
+    }
+
+    .inner-content {
+      width: 844px;
+    }
+
+    p.mobile-text {
+      width: 77%;
+    }
+  }
+
+  @media (min-width: 896px) {
+    .rotating-container {
+      width: 896px;
+      margin-left: -448px;
+    }
+
+    .inner-content {
+      width: 896px;
+    }
+
+    p.mobile-text {
+      width: 78%;
     }
   }
 }
