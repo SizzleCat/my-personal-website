@@ -668,6 +668,17 @@ form h4 {
   display: inline-block;
 }
 
+/* #error {
+  color: red;
+  font-weight: 600;
+  font-size: 1rem; */
+/* text-align: right;
+  position: relative;
+  bottom: 3px;
+  grid-column: 4 / 5;
+  grid-row: 4; */
+/* } */
+
 input[type="text"],
 input[type="email"],
 textarea {

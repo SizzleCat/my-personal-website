@@ -60,8 +60,6 @@ function checkMockups() {
   mockups.forEach((mockup) => {
     const mockupTop = mockup.getBoundingClientRect().top;
 
-    console.log(mockup.getBoundingClientRect());
-
     if (mockupTop < triggerBottom) {
       mockup.classList.remove("mockup");
       mockup.classList.add("slide-right");
@@ -73,6 +71,27 @@ function checkMockups() {
 }
 
 // contact form
-const name = document.getElementById("name");
-const email = document.getElementById("email");
-const message = document.getElementById("message");
+// const name = document.getElementById("name");
+// const email = document.getElementById("email");
+// const message = document.getElementById("message");
+// const form = document.getElementById("form");
+// const error = document.getElementById("error");
+
+// form.addEventListener("submit", function (event) {
+//   event.preventDefault();
+
+//   if (this.name.value === "") {
+//     this.name.style.background = "url(images/icon-error.svg) no-repeat 96% 50%";
+//     error.innerText = "Please complete all fields";
+//   }
+//   if (this.email.value === "") {
+//     this.email.style.background =
+//       "url(images/icon-error.svg) no-repeat 96% 50%";
+//     error.innerText = "Please complete all fields";
+//   }
+//   if (this.name.value === "") {
+//     this.message.style.background =
+//       "url(images/icon-error.svg) no-repeat 98% 50%";
+//     error.innerText = "Please complete all fields.";
+//   }
+// });

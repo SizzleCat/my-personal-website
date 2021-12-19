@@ -349,15 +349,17 @@
               </h3>
             </div>
           </div>
-          <form action="">
+          <form method="POST" data-netlify="true" data-netlify-recaptcha="true" id="form" action="">
             <div class="photo-marcia"></div>
             <h4>Marcia & I would love to hear from you...</h4>
-            <input type="text" id="name" placeholder="Name" />
-            <input type="email" id="email" placeholder="Email" />
-            <textarea id="message" placeholder="Message"></textarea>
+            <input type="text" id="name" placeholder="Name" name="name"/>
+            <input type="email" id="email" placeholder="Email" name="email"/>
+            <textarea id="message" placeholder="Message"></textarea name="message">
             <input type="submit" id="submit" value="Submit" />
+            <div id="error"></div>
+            <div data-netlify-recaptcha="true"></div>
           </form>
-
+        
           <div class="social-media">
             <a href="https://github.com/SizzleCat" target="_blank">
               <i class="fab fa-github-square fa-3x"></i>
