@@ -34,7 +34,7 @@ html {
 body {
   background-color: #000;
   font-family: "Spartan", sans-serif;
-  font-display: block;
+  font-display: fallback;
   font-weight: 500;
   color: #000;
   overflow: hidden;
