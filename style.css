@@ -1,5 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;500;600;700&display=swap");
 
+#loading {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 99;
+  /* background: black; */
+  display: block;
+}
+
+#loading-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -85px;
+  margin-top: -82px;
+  z-index: 100;
+  width: 171px;
+  height: 165px;
+  display: block;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,6 +45,7 @@ body {
 
 #wrapper {
   position: relative;
+  display: none;
 }
 
 /* rotating cover: extra-wide screens  */

@@ -1,10 +1,26 @@
+// loading animation
+const wrapper = document.getElementById("wrapper");
+wrapper.style.display = "none";
+
+const loading = document.getElementById("loading");
+const loadAnimation = document.getElementById("loading-animation");
+
+document.onreadystatechange = function () {
+  setTimeout(() => {
+    if (document.readyState === "complete") {
+      loading.style.display = "none";
+      wrapper.style.display = "block";
+    }
+  }, 4800);
+};
+
+// open rotating cover and links slide in
 const hamburger = document.getElementById("hamburger");
 const rotContainer = document.querySelector(".rotating-container");
 const body = document.querySelector("body");
 const x = document.getElementById("x-mark");
 const links = document.querySelectorAll("li");
 
-// open rotating cover and links slide in
 hamburger.addEventListener("click", rotateScreen);
 
 function rotateScreen() {
