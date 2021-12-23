@@ -5,14 +5,18 @@ wrapper.style.display = "none";
 const loading = document.getElementById("loading");
 const loadAnimation = document.getElementById("loading-animation");
 
-document.onreadystatechange = function () {
+function checkLoading() {
+  console.log("trying");
   setTimeout(() => {
     if (document.readyState === "complete") {
       loading.style.display = "none";
       wrapper.style.display = "block";
+    } else {
+      checkLoading();
     }
-  }, 4800);
-};
+  }, 3500);
+}
+document.onreadystatechange = checkLoading();
 
 // open rotating cover and links slide in
 const hamburger = document.getElementById("hamburger");
