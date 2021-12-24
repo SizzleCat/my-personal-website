@@ -95,7 +95,6 @@ body {
 }
 
 #logo {
-  height: 300px;
   transform: skewX(10deg);
   margin: 0 2rem 1rem 0;
 }
@@ -732,7 +731,7 @@ footer p {
   font-size: 1rem;
 }
 
-/* to exclude mobile: landscape orientations (which are handled at the bottom) */
+/* to exclude mobile landscape orientations (as they're handled at the bottom) */
 @media (min-height: 501px) {
   /* nested media query: extra wide + short */
   @media (min-width: 1200px) {
@@ -1174,6 +1173,7 @@ footer p {
 
       #logo {
         height: 200px;
+        width: 120px;
       }
 
       .stripe h1 {
@@ -1641,6 +1641,7 @@ footer p {
 
     #logo {
       height: 150px;
+      width: 90px;
       margin: 0 1.2rem 0 0;
     }
 
