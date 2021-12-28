@@ -49,7 +49,7 @@ body {
   display: none;
   overflow: hidden;
   width: 100%;
-  height: 9100px;
+  height: 9600px;
 }
 
 /* rotating cover: extra-wide screens  */
@@ -746,7 +746,7 @@ footer p {
   @media (min-width: 1200px) {
     @media (max-height: 950px) {
       #wrapper {
-        height: 8850px;
+        height: 880px;
       }
 
       #vid-right {
@@ -839,7 +839,7 @@ footer p {
   /* for somewhat wide screens, including large tablets */
   @media (max-width: 1199px) and (min-width: 1024px) {
     #wrapper {
-      height: 8550px;
+      height: 10010px;
     }
 
     .rotating-container {
@@ -888,7 +888,7 @@ footer p {
     /* nested media query: wide + short */
     @media (max-height: 950px) {
       #wrapper {
-        height: 8400px;
+        height: 8420px;
       }
 
       .home h1 {
@@ -970,7 +970,7 @@ footer p {
   /* for medium screens & most tablets */
   @media (max-width: 1023px) and (min-width: 768px) {
     #wrapper {
-      height: 8000px;
+      height: 8700px;
     }
 
     .rotating-container {
@@ -1189,7 +1189,7 @@ footer p {
   @media all and (orientation: portrait) {
     @media (max-width: 767px) {
       #wrapper {
-        height: 7700px;
+        height: 7000px;
       }
 
       .rotating-container {
