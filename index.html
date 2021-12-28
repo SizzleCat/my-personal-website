@@ -437,7 +437,11 @@ document.onreadystatechange = checkLoading();
       cover.style.display="none";
       const xMark = document.getElementById("x-mark");
       xMark.style.display="none";
-      document.querySelectorAll("li").style.transform = "translateX(0)";
+      body.classList.add("show-overflow");
+      const links = document.querySelectorAll("li");
+      links.forEach(link => {
+        link.style.transform = "translateX(0)";
+      });
     }
    </script>
   </body>
