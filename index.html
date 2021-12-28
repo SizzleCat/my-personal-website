@@ -431,18 +431,18 @@ document.onreadystatechange = checkLoading();
 
      if(isHoverableDevice.matches) {
       document.write('<script type="text/javascript" src="hoverboard.js"><\/script>');
-    } else {
-      const cover = document.querySelector
-      (".rotating-container");
-      cover.style.display="none";
-      const xMark = document.getElementById("x-mark");
-      xMark.style.display="none";
-      body.classList.add("show-overflow");
-      const links = document.querySelectorAll("li");
-      links.forEach(link => {
-        link.style.transform = "translateX(0)";
-      });
-    }
+    // } else {
+    //   const cover = document.querySelector
+    //   (".rotating-container");
+    //   cover.style.display="none";
+    //   const xMark = document.getElementById("x-mark");
+    //   xMark.style.display="none";
+    //   body.classList.add("show-overflow");
+    //   const links = document.querySelectorAll("li");
+    //   links.forEach(link => {
+    //     link.style.transform = "translateX(0)";
+    //   });
+    // }
    </script>
   </body>
 </html>
