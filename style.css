@@ -47,6 +47,7 @@ body {
 #wrapper {
   position: relative;
   display: none;
+  /* overflow: hidden; */
 }
 
 /* rotating cover: extra-wide screens  */
@@ -151,6 +152,11 @@ h1.frontend {
   margin: 0 auto;
   padding: 0 4rem;
   border-radius: 0 0 10px 10px;
+  position: absolute;
+  height: auto;
+  left: 50%;
+  margin-left: -600px;
+  top: 0;
 }
 
 section {

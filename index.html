@@ -427,10 +427,11 @@ document.onreadystatechange = checkLoading();
     <script src="main.js" ></script>
     
    <script>
-     const isHoverableDevice = window.matchMedia('(hover: hover) and (pointer: fine)')
+     const isHoverableDevice = window.matchMedia('(hover: hover) and (pointer: fine)');
 
      if(isHoverableDevice.matches) {
       document.write('<script type="text/javascript" src="hoverboard.js"><\/script>');
+      };
     // } else {
     //   const cover = document.querySelector
     //   (".rotating-container");
