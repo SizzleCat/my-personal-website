@@ -435,7 +435,9 @@ document.onreadystatechange = checkLoading();
       const cover = document.querySelector
       (".rotating-container");
       cover.style.display="none";
-      console.log("not hoverable");
+      const xMark = document.getElementById("x-mark");
+      xMark.style.display="none";
+      document.querySelectorAll("li").style.transform = "translateX(0)";
     }
    </script>
   </body>
