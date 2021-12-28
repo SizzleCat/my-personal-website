@@ -425,17 +425,17 @@ function checkLoading() {
 document.onreadystatechange = checkLoading();
     </script>
     <script src="main.js" ></script>
-    <!-- <script>
-      if (screen && screen.width > 1000) {
-        document.write('<script type="text/javascript" src="hoverboard.js"><\/script>');
-      }
-    </script> -->
+    
    <script>
      const isHoverableDevice = window.matchMedia('(hover: hover) and (pointer: fine)')
 
      if(isHoverableDevice.matches) {
       document.write('<script type="text/javascript" src="hoverboard.js"><\/script>');
-     }
+    } else {
+      const cover = document.querySelector
+      (".rotating-cover");
+      cover.style.display="none";
+    }
    </script>
   </body>
 </html>
