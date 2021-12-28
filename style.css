@@ -47,7 +47,9 @@ body {
 #wrapper {
   position: relative;
   display: none;
-  /* overflow: hidden; */
+  overflow: hidden;
+  width: 100%;
+  height: 9100px;
 }
 
 /* rotating cover: extra-wide screens  */
@@ -832,6 +834,10 @@ footer p {
 
   /* for somewhat wide screens, including large tablets */
   @media (max-width: 1199px) and (min-width: 1024px) {
+    #wrapper {
+      height: 8550px;
+    }
+
     .rotating-container {
       width: 1024px;
       margin-left: -512px;
@@ -955,6 +961,10 @@ footer p {
 
   /* for medium screens & most tablets */
   @media (max-width: 1023px) and (min-width: 768px) {
+    #wrapper {
+      height: 7800px;
+    }
+
     .rotating-container {
       width: 768px;
       margin-left: -384px;
@@ -1166,6 +1176,10 @@ footer p {
   /* mobile */
   @media all and (orientation: portrait) {
     @media (max-width: 767px) {
+      #wrapper {
+        height: 7700px;
+      }
+
       .rotating-container {
         width: 374px;
         margin-left: -187px;
