@@ -41,6 +41,7 @@ body {
 
 .show-overflow {
   overflow-y: visible;
+  overflow-x: hidden;
 }
 
 #wrapper {
