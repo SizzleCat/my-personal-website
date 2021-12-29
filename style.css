@@ -967,7 +967,7 @@ footer p {
     }
   }
 
-  /* for medium screens & most tablets */
+  /* for medium screens & most tablets in portrait mode */
   @media (max-width: 1023px) and (min-width: 768px) {
     #wrapper {
       height: 8700px;
@@ -1185,25 +1185,219 @@ footer p {
     }
   }
 
+  /* mini-tablets in portrait mode */
+  @media (max-width: 767px) and (min-width: 744px) {
+    #wrapper {
+      height: 8700px;
+    }
+
+    .rotating-container {
+      width: 744px;
+      margin-left: -372px;
+    }
+
+    .hamburger {
+      font-size: 36px;
+    }
+
+    .stripe {
+      margin-left: 0;
+      width: 200px;
+    }
+
+    .stripe h1 {
+      font-size: 43px;
+    }
+
+    h1.frontend {
+      left: 330px;
+    }
+
+    .inner-content {
+      width: 744px;
+      margin-left: -372px;
+    }
+
+    section {
+      padding-top: 4rem;
+      margin-bottom: 5rem;
+      min-height: 100vh;
+    }
+
+    .home h1 {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    nav ul {
+      text-align: left;
+    }
+
+    nav ul li {
+      font-size: 40px;
+      margin: 1.5rem 0 0 0;
+    }
+
+    h2 {
+      font-size: 60px;
+    }
+
+    #skills main {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .progress-bars h3 {
+      font-size: 1rem;
+    }
+
+    .progress {
+      height: 12px;
+    }
+
+    .panel h3 {
+      font-size: 20px;
+    }
+
+    .extra {
+      display: none;
+    }
+
+    .grid-wrapper {
+      row-gap: 20px;
+      column-gap: 20px;
+      grid-template-rows:
+        365px auto auto 180px 270px 180px 200px auto 500px 300px
+        500px 70px 200px auto 190px 250px;
+    }
+
+    .my-website-description {
+      grid-column: 1 / 5;
+      grid-row: 2;
+    }
+
+    #my-website-img {
+      grid-column: 1 / 4;
+      grid-row: 1;
+      margin: 1rem 0;
+    }
+
+    .code-challenges-description {
+      grid-row: 3;
+    }
+
+    #challenge1,
+    #challenge2 {
+      grid-row: 4;
+    }
+
+    #challenge3,
+    #challenge4 {
+      grid-row: 5;
+    }
+
+    #challenge5,
+    #challenge6 {
+      grid-row: 5;
+    }
+
+    #challenge7,
+    #challenge8 {
+      grid-row: 6;
+    }
+
+    #challenge9,
+    #challenge10 {
+      grid-row: 7;
+    }
+
+    .website-design-description {
+      grid-row: 8;
+    }
+
+    #wireframe1 {
+      grid-row: 9;
+    }
+
+    #hifi-mockup1 {
+      grid-row: 9 / 11;
+    }
+
+    #wireframe2 {
+      grid-row: 11;
+    }
+
+    #hifi-mockup2 {
+      grid-row: 11 / 13;
+    }
+
+    #wireframe3,
+    #hifi-mockup3 {
+      grid-row: 13;
+    }
+
+    .digital-designs-description {
+      grid-row: 14;
+    }
+
+    #gd1,
+    #gd2 {
+      grid-row: 15;
+    }
+
+    #gd3,
+    #gd4 {
+      grid-row: 16;
+    }
+
+    .photo-marcia {
+      width: 250px;
+      height: 180px;
+      top: -80%;
+    }
+
+    #contact {
+      height: auto;
+    }
+
+    #contact h3 {
+      font-size: 20px;
+      margin: 1rem 0;
+    }
+
+    form {
+      margin: 6rem 0 3rem 0;
+    }
+
+    #submit {
+      font-size: 20px;
+    }
+  }
+
   /* mobile */
-  @media all and (orientation: portrait) {
-    @media (max-width: 767px) {
+  @media (orientation: portrait) {
+    @media screen and (max-width: 500px) and (min-width: 414px) {
       #wrapper {
-        height: 7000px;
+        height: 7800px;
       }
 
       .rotating-container {
-        width: 374px;
-        margin-left: -187px;
+        width: 414px;
+        margin-left: -207px;
       }
 
       .hamburger {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
 
       .stripe {
         margin-left: 0;
-        width: 120px;
+        width: 130px;
       }
 
       #logo {
@@ -1212,7 +1406,7 @@ footer p {
       }
 
       .stripe h1 {
-        font-size: 26px;
+        font-size: 28px;
         margin: 5px 0;
       }
 
@@ -1221,13 +1415,13 @@ footer p {
       }
 
       h1.frontend {
-        left: 138px;
+        left: 148px;
       }
 
       .inner-content {
-        width: 374px;
+        width: 414px;
         padding: 0 2rem 1rem 2rem;
-        margin-left: -187px;
+        margin-left: -207px;
       }
 
       .home {
@@ -1238,7 +1432,7 @@ footer p {
 
       #home h1 {
         margin-top: 2rem;
-        font-size: 56px;
+        font-size: 54px;
         font-weight: 500;
       }
 
@@ -1247,7 +1441,11 @@ footer p {
       }
 
       h2 {
-        font-size: 56px;
+        font-size: 54px;
+      }
+
+      header i {
+        margin-left: 1rem;
       }
 
       header {
@@ -1281,15 +1479,16 @@ footer p {
       nav {
         position: absolute;
         right: 0;
-        top: 23rem;
+        top: 25rem;
       }
 
       nav ul {
         text-align: left;
+        margin-right: 0.5rem;
       }
 
       nav ul li {
-        font-size: 24px;
+        font-size: 30px;
         margin: 1.5rem 0;
         font-weight: 500;
       }
@@ -1315,6 +1514,7 @@ footer p {
 
       .panel h3 {
         font-size: 18px;
+        line-height: 1.3;
       }
 
       .panel {
@@ -1364,8 +1564,8 @@ footer p {
         row-gap: 20px;
         column-gap: 20px;
         grid-template-rows:
-          225px auto auto 200px 270px 200px 210px auto 200px 100px
-          200px 50px 100px auto 200px 200px 200px 200px;
+          250px auto auto 220px 300px 190px 220px auto 230px 100px
+          230px 30px 110px auto 230px 230px 260px 240px;
       }
 
       #challenge2,
@@ -1547,7 +1747,7 @@ footer p {
       }
 
       .social-media i {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin: 0 8px;
       }
 
@@ -1555,109 +1755,759 @@ footer p {
         font-size: 12px;
         margin-top: 2rem;
       }
+    }
 
-      @media (max-width: 320px) {
-        #wrapper {
-          height: 7330px;
-        }
+    @media (max-width: 413px) and (min-width: 360px) {
+      #wrapper {
+        height: 7650px;
+      }
 
-        .rotating-container {
-          width: 320px;
-          margin-left: -160px;
-        }
+      .rotating-container {
+        width: 360px;
+        margin-left: -180px;
+      }
 
-        .stripe {
-          margin-left: -30px;
-        }
+      .hamburger {
+        font-size: 2rem;
+      }
 
-        .inner-content {
-          width: 320px;
-          margin-left: -160px;
-        }
+      .stripe {
+        margin-left: -10px;
+        width: 120px;
+      }
 
-        section {
-          margin-bottom: 3rem;
-        }
+      #logo {
+        height: 200px;
+        width: 120px;
+      }
 
-        p {
-          line-height: 1.6;
-        }
+      .stripe h1 {
+        font-size: 26px;
+        margin: 5px 0;
+      }
 
-        #home h1 {
-          margin-top: 1rem;
-          font-size: 46px;
-        }
+      .mobile-hide {
+        display: none;
+      }
 
-        h2 {
-          font-size: 46px;
-        }
+      h1.frontend {
+        left: 138px;
+      }
 
-        header {
-          margin-bottom: 1rem;
-        }
+      .inner-content {
+        width: 360px;
+        padding: 0 2rem 1rem 2rem;
+        margin-left: -180px;
+      }
 
-        header i {
-          margin-left: 1rem;
-        }
+      .home {
+        display: block;
+        position: relative;
+        padding: 6rem 0 3rem 0;
+      }
 
-        #vid-small {
-          width: 150px;
-          height: 230px;
-          margin: 1rem 0;
-        }
+      #home h1 {
+        margin-top: 2rem;
+        font-size: 48px;
+        font-weight: 500;
+      }
 
-        nav {
-          bottom: 18rem;
-        }
+      .fa-circle-xmark {
+        font-size: 2.5rem;
+      }
 
-        nav ul li {
-          font-size: 20px;
-        }
+      h2 {
+        font-size: 48px;
+      }
 
-        .fa-chevron-up {
-          font-size: 1.5rem;
-        }
+      header i {
+        margin-left: 1rem;
+      }
 
-        #projects h2 {
-          margin-bottom: 1rem;
-        }
+      header {
+        margin-bottom: 2rem;
+      }
 
-        #projects h3 {
-          font-size: 20px;
-          margin-bottom: 0.7rem;
-        }
+      p {
+        font-size: 16px;
+      }
 
-        .grid-wrapper {
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-          row-gap: 1rem;
-          column-gap: 1rem;
-          grid-template-rows:
-            185px auto auto 180px 270px 150px 170px auto 200px 100px
-            200px 20px 80px auto 170px 170px 200px 200px;
-        }
+      p.default-text {
+        display: none;
+      }
 
-        .contact-info i {
-          font-size: 2rem;
-          margin-right: 10px;
-        }
+      p.mobile-text {
+        display: inline;
+      }
 
-        #contact h3 {
-          font-size: 1rem;
-        }
+      #vid,
+      #vid-right {
+        display: none;
+      }
 
-        #contact h4 {
-          font-size: 18px;
-          margin: 0.5rem 0;
-        }
+      #vid-small {
+        width: 180px;
+        height: 250px;
+        margin: 2rem 0;
+        display: block;
+      }
 
-        .social-media i {
-          font-size: 2.5rem;
-          margin: 0 5px;
-        }
+      nav {
+        position: absolute;
+        right: 0;
+        top: 23rem;
+      }
 
-        footer p {
-          margin-top: 2rem;
-        }
+      nav ul {
+        text-align: left;
+      }
+
+      nav ul li {
+        font-size: 24px;
+        margin: 1.5rem 0;
+        font-weight: 500;
+      }
+
+      .extra {
+        display: none;
+      }
+
+      .fa-chevron-up {
+        font-size: 2rem;
+      }
+
+      #skills,
+      #projects,
+      #contact {
+        padding-top: 2rem;
+      }
+
+      #skills main {
+        display: block;
+        margin-bottom: 2rem;
+      }
+
+      .panel h3 {
+        font-size: 18px;
+        line-height: 1.3;
+      }
+
+      .panel {
+        height: 200px;
+      }
+
+      .education {
+        margin-bottom: 2rem;
+      }
+
+      .progress-bars h3 {
+        font-size: 14px;
+      }
+
+      .progress {
+        height: 10px;
+        margin-bottom: 15px;
+      }
+
+      .progress-bars {
+        position: static;
+        width: 100%;
+        margin-bottom: 3rem;
+      }
+
+      .panel {
+        flex: 0.9;
+      }
+
+      .panel h3 {
+        text-align: center;
+      }
+
+      .mobile-show {
+        display: inline;
+      }
+
+      #projects h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+
+      .grid-wrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 20px;
+        grid-template-rows:
+          215px auto auto 200px 270px 190px 200px auto 200px 100px
+          200px 30px 90px auto 190px 200px 230px 200px;
+      }
+
+      #challenge2,
+      #challenge3,
+      #challenge6,
+      #challenge7,
+      #challenge9 {
+        display: none;
+      }
+
+      #my-website-img {
+        grid-column: 1 / 5;
+        grid-row: 1;
+      }
+
+      .my-website-description {
+        grid-column: 1 / 5;
+        grid-row: 2;
+      }
+
+      .code-challenges-description {
+        grid-column: 1 / 5;
+        grid-row: 3;
+      }
+
+      #challenge1 {
+        grid-row: 4;
+        grid-column: 1 / 5;
+      }
+
+      #challenge4 {
+        grid-row: 5;
+        grid-column: 1 / 3;
+        margin: 0;
+      }
+
+      #challenge5 {
+        grid-row: 5;
+        grid-column: 3 / 5;
+      }
+
+      #challenge8 {
+        grid-row: 6;
+        grid-column: 1 / 5;
+      }
+
+      #challenge10 {
+        grid-row: 7;
+        grid-column: 1 / 5;
+      }
+
+      .website-design-description {
+        grid-row: 8;
+      }
+
+      #wireframe1 {
+        grid-row: 9;
+      }
+
+      #hifi-mockup1 {
+        grid-row: 9 / 11;
+      }
+
+      #wireframe2 {
+        grid-row: 11;
+      }
+
+      #hifi-mockup2 {
+        grid-row: 11 / 13;
+      }
+
+      #wireframe3,
+      #hifi-mockup3 {
+        grid-row: 13;
+      }
+
+      .digital-designs-description {
+        grid-row: 14;
+      }
+
+      #gd1 {
+        grid-row: 15;
+        grid-column: 1 / 5;
+      }
+
+      #gd2 {
+        grid-row: 16;
+        grid-column: 1 / 5;
+        background-size: 130%;
+        background-position: left top;
+      }
+
+      #gd3 {
+        grid-row: 17;
+        grid-column: 1 / 5;
+      }
+
+      #gd4 {
+        grid-row: 18;
+        grid-column: 1 / 5;
+      }
+
+      #contact {
+        padding-bottom: 0;
+        height: auto;
+      }
+
+      #contact h3 {
+        font-size: 18px;
+        margin: 0.75rem 0;
+      }
+
+      .contact-info {
+        margin: 0;
+      }
+
+      .contact-info i {
+        font-size: 3rem;
+      }
+
+      form {
+        grid-template-rows: 200px auto 35px 35px 100px 40px;
+        padding: 1rem;
+        margin: 1.5rem 0;
+      }
+
+      .photo-marcia {
+        position: static;
+        width: 100%;
+        height: 200px;
+        grid-row: 1;
+        grid-column: 1 / 5;
+        background-size: cover;
+      }
+
+      form h4 {
+        grid-column: 1 / 5;
+        grid-row: 2;
+      }
+
+      #contact h4 {
+        font-size: 20px;
+        margin: 1rem 0.5rem;
+      }
+
+      #name {
+        grid-column: 1 / 5;
+        grid-row: 3;
+      }
+
+      #email {
+        grid-column: 1 / 5;
+        grid-row: 4;
+      }
+
+      #message {
+        grid-column: 1 / 5;
+        grid-row: 5;
+      }
+
+      #submit {
+        grid-column: 1 / 5;
+        grid-row: 6;
+        font-size: 16px;
+        padding: 0;
+      }
+
+      input {
+        padding: 1rem 0.5rem;
+      }
+
+      textarea {
+        padding-top: 1rem;
+        resize: none;
+      }
+
+      ::placeholder {
+        font-size: 12px;
+      }
+
+      .social-media i {
+        font-size: 2.5rem;
+        margin: 0 8px;
+      }
+
+      footer p {
+        font-size: 12px;
+        margin-top: 2rem;
+      }
+    }
+
+    @media screen and (max-width: 359px) and (min-width: 320px) {
+      #wrapper {
+        height: 7620px;
+      }
+
+      .rotating-container {
+        width: 320px;
+        margin-left: -160px;
+      }
+
+      .hamburger {
+        font-size: 2rem;
+      }
+
+      .stripe {
+        margin-left: -30px;
+        width: 120px;
+      }
+
+      #logo {
+        height: 200px;
+        width: 120px;
+      }
+
+      .stripe h1 {
+        font-size: 26px;
+        margin: 5px 0;
+      }
+
+      .mobile-hide {
+        display: none;
+      }
+
+      h1.frontend {
+        left: 138px;
+      }
+
+      .inner-content {
+        width: 320px;
+        padding: 0 2rem 1rem 2rem;
+        margin-left: -160px;
+      }
+
+      .home {
+        display: block;
+        position: relative;
+        padding: 6rem 0 3rem 0;
+      }
+
+      #home h1 {
+        margin-top: 1rem;
+        font-size: 40px;
+        font-weight: 500;
+      }
+
+      .fa-circle-xmark {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 40px;
+      }
+
+      header i {
+        margin-left: 1rem;
+      }
+
+      i.fa-chevron-up {
+        font-size: 1.5rem;
+      }
+
+      header {
+        margin-bottom: 2rem;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      p.default-text {
+        display: none;
+      }
+
+      p.mobile-text {
+        display: inline;
+      }
+
+      #vid,
+      #vid-right {
+        display: none;
+      }
+
+      #vid-small {
+        width: 160px;
+        height: 230px;
+        margin: 2rem 0;
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        right: 0;
+        top: 23rem;
+      }
+
+      nav ul {
+        text-align: left;
+      }
+
+      nav ul li {
+        font-size: 20px;
+        margin: 1.5rem 0;
+        font-weight: 500;
+      }
+
+      .extra {
+        display: none;
+      }
+
+      .fa-chevron-up {
+        font-size: 2rem;
+      }
+
+      #skills,
+      #projects,
+      #contact {
+        padding-top: 2rem;
+      }
+
+      #skills main {
+        display: block;
+        margin-bottom: 2rem;
+      }
+
+      .panel h3 {
+        font-size: 18px;
+        line-height: 1.3;
+      }
+
+      .panel {
+        height: 200px;
+      }
+
+      .education {
+        margin-bottom: 2rem;
+      }
+
+      .progress-bars h3 {
+        font-size: 14px;
+      }
+
+      .progress {
+        height: 10px;
+        margin-bottom: 15px;
+      }
+
+      .progress-bars {
+        position: static;
+        width: 100%;
+        margin-bottom: 3rem;
+      }
+
+      .panel {
+        flex: 0.9;
+      }
+
+      .panel h3 {
+        text-align: center;
+      }
+
+      .mobile-show {
+        display: inline;
+      }
+
+      #projects h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+
+      .grid-wrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 20px;
+        grid-template-rows:
+          185px auto auto 170px 250px 160px 170px auto 200px 100px
+          190px 10px 80px auto 165px 170px 200px 200px;
+      }
+
+      #challenge2,
+      #challenge3,
+      #challenge6,
+      #challenge7,
+      #challenge9 {
+        display: none;
+      }
+
+      #my-website-img {
+        grid-column: 1 / 5;
+        grid-row: 1;
+      }
+
+      .my-website-description {
+        grid-column: 1 / 5;
+        grid-row: 2;
+      }
+
+      .code-challenges-description {
+        grid-column: 1 / 5;
+        grid-row: 3;
+      }
+
+      #challenge1 {
+        grid-row: 4;
+        grid-column: 1 / 5;
+      }
+
+      #challenge4 {
+        grid-row: 5;
+        grid-column: 1 / 3;
+        margin: 0;
+      }
+
+      #challenge5 {
+        grid-row: 5;
+        grid-column: 3 / 5;
+      }
+
+      #challenge8 {
+        grid-row: 6;
+        grid-column: 1 / 5;
+      }
+
+      #challenge10 {
+        grid-row: 7;
+        grid-column: 1 / 5;
+      }
+
+      .website-design-description {
+        grid-row: 8;
+      }
+
+      #wireframe1 {
+        grid-row: 9;
+      }
+
+      #hifi-mockup1 {
+        grid-row: 9 / 11;
+      }
+
+      #wireframe2 {
+        grid-row: 11;
+      }
+
+      #hifi-mockup2 {
+        grid-row: 11 / 13;
+      }
+
+      #wireframe3,
+      #hifi-mockup3 {
+        grid-row: 13;
+      }
+
+      .digital-designs-description {
+        grid-row: 14;
+      }
+
+      #gd1 {
+        grid-row: 15;
+        grid-column: 1 / 5;
+      }
+
+      #gd2 {
+        grid-row: 16;
+        grid-column: 1 / 5;
+        background-size: 130%;
+        background-position: left top;
+      }
+
+      #gd3 {
+        grid-row: 17;
+        grid-column: 1 / 5;
+      }
+
+      #gd4 {
+        grid-row: 18;
+        grid-column: 1 / 5;
+      }
+
+      #contact {
+        padding-bottom: 0;
+        height: auto;
+      }
+
+      #contact h3 {
+        font-size: 16px;
+        margin: 0.75rem 0;
+      }
+
+      .contact-info {
+        margin: 0;
+      }
+
+      .contact-info i {
+        font-size: 2rem;
+      }
+
+      form {
+        grid-template-rows: 200px auto 35px 35px 100px 40px;
+        padding: 1rem;
+        margin: 1.5rem 0;
+      }
+
+      .photo-marcia {
+        position: static;
+        width: 100%;
+        height: 200px;
+        grid-row: 1;
+        grid-column: 1 / 5;
+        background-size: cover;
+      }
+
+      form h4 {
+        grid-column: 1 / 5;
+        grid-row: 2;
+      }
+
+      #contact h4 {
+        font-size: 20px;
+        margin: 1rem 0.5rem;
+      }
+
+      #name {
+        grid-column: 1 / 5;
+        grid-row: 3;
+      }
+
+      #email {
+        grid-column: 1 / 5;
+        grid-row: 4;
+      }
+
+      #message {
+        grid-column: 1 / 5;
+        grid-row: 5;
+      }
+
+      #submit {
+        grid-column: 1 / 5;
+        grid-row: 6;
+        font-size: 16px;
+        padding: 0;
+      }
+
+      input {
+        padding: 1rem 0.5rem;
+      }
+
+      textarea {
+        padding-top: 1rem;
+        resize: none;
+      }
+
+      ::placeholder {
+        font-size: 12px;
+      }
+
+      .social-media i {
+        font-size: 2rem;
+        margin: 0 8px;
+      }
+
+      footer p {
+        font-size: 12px;
+        margin-top: 2rem;
       }
     }
   }
