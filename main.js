@@ -31,6 +31,18 @@ function unRotateScreen() {
   });
 }
 
+// detect the height of inner content and set the height of the wrapper to match
+function setHeight() {
+  const wrapper = document.getElementById("wrapper");
+  const innerContentHeight =
+    document.querySelector(".inner-content").offsetHeight;
+  console.log(innerContentHeight);
+  wrapper.style.height = innerContentHeight + "px";
+}
+setHeight();
+
+window.addEventListener("resize", setHeight);
+
 // expand panels (skills section)
 panels = document.querySelectorAll(".panel");
 
