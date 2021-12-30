@@ -39,7 +39,20 @@ function setHeight() {
   console.log(innerContentHeight);
   wrapper.style.height = innerContentHeight + "px";
 }
-setHeight();
+
+window.addEventListener("load", (event) => {
+  checkIfWrapperDisplayed();
+});
+
+function checkIfWrapperDisplayed() {
+  setTimeout(() => {
+    if ((wrapper.style.display = "block")) {
+      setHeight();
+    } else {
+      checkIfWrapperDisplayed();
+    }
+  }, 100);
+}
 
 window.addEventListener("resize", setHeight);
 
