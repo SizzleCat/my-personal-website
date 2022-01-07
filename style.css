@@ -118,7 +118,7 @@ h1.frontend {
   color: #fff;
   transform: skewX(10deg);
   position: relative;
-  left: 420px;
+  left: 430px;
 }
 
 .hoverboard-container {
@@ -233,7 +233,7 @@ h2 {
 p {
   font-size: 20px;
   font-weight: 600;
-  line-height: 1.7;
+  line-height: 1.9;
   color: #000;
 }
 
@@ -288,7 +288,7 @@ a:hover {
 
 #skills main {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 3fr;
   gap: 3rem;
   margin-bottom: 2rem;
 }
@@ -746,7 +746,7 @@ footer p {
     @media (max-height: 950px) {
       #vid-right {
         display: block;
-        margin-right: 3rem;
+        margin-right: 2rem;
         height: 250px;
         width: 200px;
       }
@@ -757,7 +757,8 @@ footer p {
       }
 
       nav ul li {
-        margin: 2rem 0 0 0;
+        margin: 2rem 0 5px 0;
+        font-size: 2.5rem;
       }
 
       #skills main {
@@ -769,7 +770,7 @@ footer p {
 
       .progress-bars {
         position: absolute;
-        top: -20%;
+        top: -25%;
         right: 0;
         width: 47%;
       }
@@ -848,13 +849,21 @@ footer p {
     }
 
     .home h1 {
-      font-size: 60px;
+      font-size: 70px;
       font-weight: 500;
       margin: 3rem 0 2rem 0;
     }
 
     nav ul {
       text-align: right;
+    }
+
+    nav ul li {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 70px;
     }
 
     #skills main {
@@ -905,7 +914,7 @@ footer p {
 
       .progress-bars {
         position: absolute;
-        top: -35%;
+        top: -25%;
         right: 0;
         width: 45%;
       }
@@ -975,7 +984,7 @@ footer p {
     }
 
     h1.frontend {
-      left: 330px;
+      left: 345px;
     }
 
     .inner-content {
@@ -1185,7 +1194,7 @@ footer p {
     }
 
     h1.frontend {
-      left: 330px;
+      left: 345px;
     }
 
     .inner-content {
@@ -1204,7 +1213,7 @@ footer p {
     }
 
     p {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.9;
     }
 
@@ -1386,7 +1395,7 @@ footer p {
     }
 
     h1.frontend {
-      left: 148px;
+      left: 150px;
     }
 
     .inner-content {
@@ -1775,7 +1784,7 @@ footer p {
 
     #home h1 {
       margin-top: 2rem;
-      font-size: 48px;
+      font-size: 60px;
       font-weight: 500;
     }
 
@@ -2146,7 +2155,7 @@ footer p {
 
     #home h1 {
       margin-top: 1rem;
-      font-size: 40px;
+      font-size: 50px;
       font-weight: 500;
     }
 
@@ -2473,7 +2482,6 @@ footer p {
       margin-top: 2rem;
     }
   }
-  /* } */
 }
 
 /* mobile: landscape orientation */
@@ -2504,7 +2512,7 @@ footer p {
     }
 
     h1.frontend {
-      left: 215px;
+      left: 223px;
     }
 
     .inner-content {
@@ -2538,7 +2546,7 @@ footer p {
     }
 
     .home h1 {
-      font-size: 50px;
+      font-size: 60px;
       margin: 1rem 0 3rem 0;
       font-weight: 500;
     }
