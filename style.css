@@ -37,6 +37,7 @@ body {
   font-weight: 500;
   color: #000;
   overflow: hidden;
+  text-rendering: optimizeSpeed;
 }
 
 .show-overflow {
